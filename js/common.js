@@ -5,10 +5,10 @@ function headerChangeByScroll(){
 }
 window.addEventListener("scroll", headerChangeByScroll);
 function headerShowByHover(){
-    header.classList.add("show2")
+    header.classList.add("show2");
 }
 function headerHideByHover(){
-    header.classList.remove("show2")
+    header.classList.remove("show2");
 }
 
 header.addEventListener("mouseenter", headerShowByHover);
@@ -48,4 +48,4 @@ function addListener(){
 }
 setTimeout(addListener, 500); // 가져온 html 요소에 이벤트 주기
 
-history.scrollRestoration = "manual";
+// history.scrollRestoration = "manual";

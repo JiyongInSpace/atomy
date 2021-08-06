@@ -11,6 +11,7 @@
   position: fixed;
   width: 100%;
   height: 75px;
+  z-index: 1;
 }
 
 .header-con {
@@ -25,6 +26,7 @@
           align-items: center;
   max-width: 1280px;
   height: 75px;
+  overflow: hidden;
   margin: 0 auto;
 }
 
@@ -84,8 +86,6 @@
   white-space: nowrap;
   position: relative;
   color: white;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
 }
 
 .header-con-menu > li:nth-child(2) {
@@ -95,10 +95,11 @@
 .header-con-menu > li > ul {
   list-style: none;
   position: absolute;
-  top: -440px;
+  top: 0px;
   opacity: 0;
   left: 0;
   right: 0;
+  max-height: 0;
   height: 365px;
   padding: 25px 0px;
 }
@@ -146,10 +147,10 @@
 
 .header-background1 {
   position: absolute;
+  top: 0;
   background-color: white;
   width: 100%;
   height: 75px;
-  top: 0;
   -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0 0 3px;
           box-shadow: rgba(0, 0, 0, 0.3) 0 0 3px;
   opacity: 0;
@@ -159,11 +160,14 @@
 
 .header-background2 {
   position: absolute;
+  top: 0;
   background-color: #f7f8fa;
   width: 100%;
-  height: 440px;
-  top: -365px;
+  max-height: 0;
+  height: 365px;
   opacity: 0;
+  -webkit-transform: translateY(75px);
+          transform: translateY(75px);
   -webkit-transition: 0.5s;
   transition: 0.5s;
   -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0 0 3px;
@@ -183,48 +187,21 @@
   opacity: 1;
 }
 
+.header.show2 .header-con {
+  overflow: visible;
+}
+
 .header.show2 .header-background2 {
   opacity: 1;
-  -webkit-transform: translateY(365px);
-          transform: translateY(365px);
+  max-height: 365px;
 }
 
 .header.show2 .header-con-menu > li > ul {
   opacity: 1;
-  -webkit-transform: translateY(512px);
-          transform: translateY(512px);
+  -webkit-transform: translateY(72px);
+          transform: translateY(72px);
   -webkit-transition: 0.5s;
   transition: 0.5s;
-}
-
-.header.show2 .header-con-menu > li:hover {
-  color: #04a6e1;
-}
-
-article {
-  width: 100%;
-}
-
-article div {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-article div:nth-child(even) {
-  height: 100vh;
-  background-color: #d6d3cf;
-}
-
-article div:nth-child(odd) {
-  height: 100vh;
-  background-color: #e7d5bc;
 }
 
 .aside {

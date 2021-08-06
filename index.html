@@ -9,40 +9,98 @@
     <link rel="stylesheet" href="style/index.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
 
-    <script src="js/includeHTML.js"></script>
+
     <script src="js/common.js" defer></script>
-    
+    <script src="js/index.js" defer></script>
+    <script src="js/includeHTML.js"></script>
 </head>
 <body>
     
     <header class="header" include-html="partial/header.html"></header>
 
     <article>
-        <div>
+        <div class="main">
+            <video muted autoplay loop>
+                <source src="https://global.atomy.com/kr/img/main/mVisual_AV.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="about">
             
         </div>
-        <div>
-            box2
+        <div class="brand">
+            <div class="brand-bg show"></div>
+            <div class="brand-bg"></div>
+            <div class="brand-product">
+                <div class="brand-product-con">
+                    <h1>Product</h1>
+                    <p>애터미는 절대품질 절대가격의 전략으로<br>좋은 품질의 제품만을 공급합니다.</p>
+                    <button>애터미 제품철학</button>
+                </div>
+            </div>
+            <div class="brand-indi">
+                <div class="show"></div>
+                <div></div>
+            </div>
         </div>
-        <div>
-            box3
+        <div class="atomypark">
+            <div class="atomypark-bg show"></div>
+            <div class="atomypark-bg"></div>
+            <div class="atomypark-bg"></div>
+            <div class="atomypark-bg"></div>
+            <div class="atomypark-info">
+                <div class="atomypark-info-con">
+                    <h1>Atomy Park</h1>
+                    <p>새로 꿈꾸는 100년을 위한<br>더 큰 비전이 될 것을 약속드립니다.</p>
+                    <button>애터미 파크 소개</button> <button>애터미 투어 신청</button>
+                </div>
+            </div>
+            <div class="atomypark-indi">
+                <div class="show"></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
         </div>
-        <div>
-            box4
+        <div class="csr">
+            <div class="csr-article">
+                <h1>Social Contribution</h1>
+                <figure>
+                    <img src="img/social_img01.jpg" alt="">
+                    <figcaption>
+                        <h2>미혼모 지원을 위한<br>[생소맘]기부자 조언기금 운용</h2>
+                        <p>2019년 6월, 애터미는 사랑의 열매<br> 사회복지공동모금회에 미혼모 지원을<br> 위해 100억 원을 기부했습니다.</p>자세히 보기
+                    </figcaption>
+                </figure>
+                <figure>
+                    <img src="img/social_img02.jpg" alt="">
+                    <figcaption><h2>실로암안과 학술연구원 건립 및<br>개안수술 지원</h2>
+                        <p>2019년 6월, 애터미는 사랑의 열매<br> 사회복지공동모금회에 미혼모 지원을<br> 위해 100억 원을 기부했습니다.</p>자세히 보기</figcaption>
+                </figure>
+                <figure>
+                    <img src="img/social_img03.jpg" alt="">
+                    <figcaption><h2>대만 까오슝<br>애터미 공익 마라톤</h2>
+                        <p>2019년 6월, 애터미는 사랑의 열매<br> 사회복지공동모금회에 미혼모 지원을<br> 위해 100억 원을 기부했습니다.</p>자세히 보기</figcaption>
+                </figure>
+            </div>
         </div>
-        <div>
-            box5
+        <div class="global">
+            <figure>
+            </figure>
+            <div class="global-tab">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
         </div>
-        <div>
-            box6
-        </div>
-        <div>
+        <div class="news">
             box7
         </div>
     </article>
 
     <aside class="aside" include-html="partial/aside.html"></aside>
-    <!-- <footer class="footer" include-html="partial/footer.html"></footer>  -->
+    <footer class="footer" include-html="partial/footer.html"></footer> 
 
     <script>
         includeHTML();

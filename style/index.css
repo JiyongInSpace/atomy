@@ -1,1 +1,374 @@
-/* No CSS *//*# sourceMappingURL=index.css.map */
+body {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+article {
+  width: 100%;
+}
+
+article > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+}
+
+article .main {
+  overflow: hidden;
+}
+
+article .main video {
+  width: 100%;
+  z-index: 0;
+}
+
+article .brand {
+  position: relative;
+}
+
+article .brand-bg {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  opacity: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+article .brand-bg:first-child {
+  background-image: url("../img/products_img01.jpg");
+}
+
+article .brand-bg:nth-child(2) {
+  background-image: url("../img/products_img02.jpg");
+}
+
+article .brand-bg.show {
+  opacity: 1;
+}
+
+article .brand-bg img {
+  height: 100%;
+}
+
+article .brand-product {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 1280px;
+  margin: 0 auto;
+}
+
+article .brand-product-con {
+  font-size: 24px;
+}
+
+article .brand-product-con h1 {
+  font-size: 3em;
+}
+
+article .brand-product-con p {
+  font-size: 0.85em;
+  margin: 15px 0 35px 0;
+}
+
+article .brand-product-con button {
+  font-size: 0.65em;
+  width: 200px;
+  height: 55px;
+  background: white;
+  border: none;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+article .brand-product-con button:hover {
+  color: white;
+  background-color: #04a6e1;
+}
+
+article .brand-indi {
+  position: absolute;
+  bottom: 20px;
+  width: 30px;
+  height: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+article .brand-indi div {
+  width: 9px;
+  height: 9px;
+  border: 3px solid skyblue;
+  border-radius: 1em;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+article .brand-indi div.show {
+  background: skyblue;
+}
+
+article .atomypark {
+  position: relative;
+}
+
+article .atomypark-bg {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  opacity: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+article .atomypark-bg:first-child {
+  background-image: url("../img/atomypark_bg.jpg");
+}
+
+article .atomypark-bg:nth-child(2) {
+  background-image: url("../img/atomypark_bg2.jpg");
+}
+
+article .atomypark-bg:nth-child(3) {
+  background-image: url("../img/atomypark_bg3.jpg");
+}
+
+article .atomypark-bg:nth-child(4) {
+  background-image: url("../img/atomypark_bg4.jpg");
+}
+
+article .atomypark-bg.show {
+  opacity: 1;
+}
+
+article .atomypark-bg img {
+  height: 100%;
+}
+
+article .atomypark-info {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 1280px;
+  margin: 0 auto;
+}
+
+article .atomypark-info-con {
+  font-size: 24px;
+  color: white;
+}
+
+article .atomypark-info-con h1 {
+  font-size: 3em;
+}
+
+article .atomypark-info-con p {
+  font-size: 0.85em;
+  margin: 15px 0 35px 0;
+}
+
+article .atomypark-info-con button {
+  font-size: 0.65em;
+  width: 200px;
+  height: 55px;
+  background: white;
+  border: none;
+  margin-right: 20px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+article .atomypark-info-con button:hover {
+  color: white;
+  background-color: #04a6e1;
+}
+
+article .atomypark-indi {
+  position: absolute;
+  bottom: 20px;
+  width: 71px;
+  height: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+article .atomypark-indi div {
+  width: 9px;
+  height: 9px;
+  border: 3px solid white;
+  border-radius: 1em;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+article .atomypark-indi div.show {
+  background: white;
+}
+
+article .csr {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+article .csr-article {
+  max-width: 1280px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  font-size: 20px;
+  padding: 1em;
+}
+
+article .csr-article h1 {
+  width: 100%;
+  font-size: 3.5em;
+  text-align: center;
+  margin: 75px 0 120px 0;
+}
+
+article .csr-article figure {
+  width: 32%;
+  -ms-flex-negative: 1;
+      flex-shrink: 1;
+  position: relative;
+  overflow: hidden;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+article .csr-article figure img {
+  width: 100%;
+  vertical-align: bottom;
+}
+
+article .csr-article figure figcaption {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: #04a6e1;
+  opacity: 0.9;
+  -webkit-transform: translateY(75%);
+          transform: translateY(75%);
+  color: white;
+  padding: 40px;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+article .csr-article figure figcaption h2 {
+  height: 25%;
+  font-weight: 500;
+  font-size: 24px;
+  letter-spacing: -0.1rem;
+}
+
+article .csr-article figure figcaption p {
+  font-size: 18px;
+  padding-bottom: 1.7em;
+  margin-bottom: 1.7em;
+  border-bottom: 1px solid;
+}
+
+article .csr-article figure:hover {
+  -webkit-transform: translateY(-10%);
+          transform: translateY(-10%);
+  -webkit-box-shadow: rgba(0, 0, 0, 0.5) 0 15px 5px;
+          box-shadow: rgba(0, 0, 0, 0.5) 0 15px 5px;
+}
+
+article .csr-article figure:hover figcaption {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+article .global {
+  background-image: url("../img/worldwide_bg.jpg");
+  background-size: cover;
+}
+
+article .global figure {
+  background-image: url("https://global.atomy.com/kr/img/main/worldwide_map.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 90%;
+  height: 90%;
+}
+
+article .global figure img {
+  height: 100%;
+}
+
+article > div:nth-child(7) {
+  background-color: #e7d5bc;
+}
+/*# sourceMappingURL=index.css.map */
