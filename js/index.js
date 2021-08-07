@@ -1,29 +1,11 @@
-const brandBgs = document.querySelectorAll(".brand-bg");
+import Background from './background.js'
+
+const brandTabs = document.querySelectorAll(".brand-bg");
 const brandIndis = document.querySelectorAll(".brand-indi div");
-let brandIdx = 0;
 
-function autoChangeBrandBg(){
-    let oldIdx = brandIdx;
-    brandIdx++;
-    if(brandIdx >= brandIndis.length){
-        brandIdx = 0;
-    }
-    console.log(brandIdx);
-    ChangeBrandBg(oldIdx, brandIdx);
-}
+const parksTabs = document.querySelectorAll(".atomypark-bg");
+const parksIndis = document.querySelectorAll(".atomypark-indi div");
 
-function ChangeBrandBg(oldIdx, index){
-    brandBgs[oldIdx].classList.remove("show");
-    brandIndis[oldIdx].classList.remove("show");
-    brandBgs[index].classList.add("show");
-    brandIndis[index].classList.add("show");
-}
+const brandBg = new Background(brandTabs, brandIndis, 4);
+const atomyparkBg = new Background(parksTabs, parksIndis, 3);
 
-brandIndis.forEach((indi, index) => {
-    indi.addEventListener("click", () => {
-        ChangeBrandBg(brandIdx, index);
-        brandIdx = index;
-    });
-})
-
-setInterval(autoChangeBrandBg, 4000);
