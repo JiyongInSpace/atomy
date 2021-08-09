@@ -4,15 +4,16 @@
 
 .header{
     position: fixed;
-    width: 100%;
+    width: 100vw;
     height: 75px;
     z-index: 1;
     &-con{
         @include flex-box(space-between);
-        max-width: 1280px;
+        max-width: 1340px;
         height: 75px;
         overflow: hidden;
         margin: 0 auto;
+        padding: 0 30px;
         &-logo{
             flex-grow: 1;
             height:100%;
@@ -24,6 +25,10 @@
                 img{
                     transform: translateY(-50%);
                 }
+            }
+            @include desktop{
+                flex-grow: 0;
+                order: 2;
             }
         }
         &-menu{
@@ -37,6 +42,12 @@
                 white-space: nowrap;
                 position: relative;
                 color:white;
+                span{
+                    transition: 0.5s;
+                }
+                &:hover span{
+                    color: $main-color;
+                }
                 &:nth-child(2){
                     width:190px;
                 }
@@ -66,17 +77,34 @@
                     }
                 }
             }
-            
+            @include desktop {
+                display: none;
+            }
         }
         &-lang{
             z-index: 1;
             flex-grow: 1;
             @include flex-box(flex-end);
+            
             height:100%;
             text-align: right;
             color:white;
             span{
                 transition: 0.5s;
+            }
+            @include desktop{
+                flex-grow: 0;
+                order: 1;
+            }
+        }
+        &-burger{
+            display: none;
+            z-index: 1;
+            color: white;
+            @include desktop {
+                
+                display: block;
+                order: 3;
             }
         }
     }
@@ -102,20 +130,76 @@
         transform: translateY(75px);
         transition: 0.5s;
         box-shadow: rgba(0, 0, 0, 0.3) 0 0 3px;
+        @include desktop {
+            display: none;
+        }
+    }
+
+    &-s{
+        display: none;
+        background-color: white;
+        padding: 10px;
+        height: calc(100vh - 75px);
+        flex-direction: column;
+        &-menu{
+            &-list{
+                padding: 2px 15px;
+                &.show>ul{
+                    display: block;
+                }
+                &-name{
+                    cursor: pointer;
+                    font-size: 20px;
+                    font-weight: bold;
+                    letter-spacing: -0.05em;
+                    @include flex-box(space-between);
+                    transition: 0.3s;
+                    &:hover{color:$main-color;}
+                    span{
+                        font-size: 1.5em;
+                        color: gray;
+                    }
+                    
+                }
+                &>ul{
+                    display: none;
+                    & li{
+                        padding: 6px 0;
+                        font-size: 17px;
+                        letter-spacing: -0.05em;
+                        list-style: none;
+                        
+                    }
+                    ul>li{
+                        padding-left: 3px;
+                        font-size: 15px;
+                        &::before{content:'• ';}
+                    }
+                }
+            }
+        }
     }
 }
 
-.header.show, .header.show2{
+.header.show, .header.show2, .header.show3{
     .header-con-logo img{
         transform: translateY(0);
     }
-    .header-con-menu>li, .header-con-lang span{
+    .header-con-menu>li, .header-con-lang span, .header-con-burger i{
         color: black;
     }
     .header-background1{
         opacity: 1;
     }
 }
+.header.show3{
+    .header-s{
+        @include desktop{
+            display: block;
+        }
+    }
+}
+
 .header.show2{
     .header-con{
         overflow: visible;
@@ -140,9 +224,12 @@
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
-    z-index: 1;
+    @include tablet{
+        display: none;
+    }
     &.show{
         transform: translateX(-340px);
+        z-index: 1;
     }
     &-btns{
         cursor: pointer;
@@ -259,6 +346,33 @@
         }
     }
 }
+.aside-s{
+    @include flex-box();
+    position: fixed;
+    bottom: 1em; right: 1em;
+    width: 30px; height: 25px;
+    display: none;
+    background-color: $main-color;
+    color: white;
+    border: none;
+    transition: 0.5s;
+    transform: translateX(200%);
+    &:active{
+        transform: scale(0.8);
+        i{
+            transform: scale(0.8);
+        }
+    }
+    &.show{
+        transform: translateX(0);
+    }
+    @include tablet{
+        display: flex;
+    }
+}
+
+
+
 .footer{
     @include flex-box;
     flex-direction: column;

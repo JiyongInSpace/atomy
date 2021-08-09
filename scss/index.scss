@@ -17,13 +17,34 @@ body::-webkit-scrollbar {
     }
     .main{
         overflow: hidden;
-        video{
+        &-video{
             z-index: 0;
             object-fit: fill;
             object-position: center;
             @media (max-width: 1400px) {
                 height: 100%;
                 width: unset;
+            }
+        }
+        &-scrollinfo{
+            position: absolute;
+            bottom: 2em;
+            left: 50%;
+            color: white;
+            transform: translateX(-50%);
+            &-icon{
+                width: 25px;
+                height: 40px;
+                border: 2px solid white;
+                border-radius: 2em;
+                margin: 0 auto;
+                margin-top: 1em;
+                @include flex-box();
+                i{
+                    font-size: 5px;
+                    animation: 0.5s ease-in infinite alternate tongtong;
+
+                }
             }
         }
     }
@@ -37,30 +58,61 @@ body::-webkit-scrollbar {
             z-index: -1;
         }
         &-slide{
-            width: 1280px;
-            @include flex-box(flex-start);
+            width: 1340px;
+            padding: 0 30px;
+            @include flex-box(center);
             &-img{
-                width: 35%;
+                width: 570px;
+                height: 858px;
+                
+                vertical-align: bottom;
+                overflow: hidden;
                 div{
+                    width: 100%;
+                    transform: translateY(-16.666% * 5);
                     img{
                         width: 100%;
+                        height: 100%;
+                        margin: 20px 0;
+                    }
+                }
+                @include global-width{
+                    width: 45vw;
+                    height: 66vw;
+                }
+                @include tablet{
+                    position: absolute;
+                    width: 100vw; height: 100vh;
+                    filter:opacity(0.5);
+                    z-index: -1;
+                    div{
+                        @include flex-box();
+                        flex-direction: column;
+                        transform: translateY(-16.666% * 5);
+                        img{
+                            width: 100vw; height: 100vh;
+                            margin: 0;
+                        }
                     }
                 }
             }
             &-txt{
                 width: 50%;
+                @include flex-box(center);
                 &-list{
-                    padding-left: 13em;
+                    padding-right: 2em;
                     &-item{
                         font-size: 16px;
                         p:first-child{
                             font-size: 2.75em;
+                            
                             color: #e9e7e7;
                             font-weight: bold;
                             margin-bottom: -0.2em;
                             span{
                                 font-size: 1em;
                             }
+                            
                         }
                         p:nth-child(2){
                             font-size: 1.4em;
@@ -82,6 +134,7 @@ body::-webkit-scrollbar {
                                 span{
                                     font-size: 1.5em;
                                 }
+                                @include desktop{font-size: 3.2em;}
                             }
                             p:nth-child(2),p:nth-child(3){
                                 display: block;
@@ -118,10 +171,10 @@ body::-webkit-scrollbar {
             top:0; bottom:0; left:0; right:0;
             overflow: hidden;
             opacity: 0;
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
+            @include bg-set();
+            @include mobile{background-position: 75% 50%;}
             transition: 1s;
+            
             &:first-child{
                 background-image: url('../img/products_img01.jpg');
             }
@@ -130,6 +183,7 @@ body::-webkit-scrollbar {
             }
             &.show{
                 opacity: 1;
+                
             }
             img{
                 height: 100%;
@@ -139,10 +193,24 @@ body::-webkit-scrollbar {
             position: absolute;
             display: flex;
             flex-direction: column;
-            width: 1280px;
+            width: 1340px;
+            padding: 0 30px;
             margin: 0 auto;
+            @include global-width{
+                left: 0;
+                width: unset;
+            }
+            @include mobile{
+                left: unset;
+            }
             &-con{
                 font-size: 24px;
+                @include global-width{font-size: 21px;}
+                @include tablet{font-size: 18px;}
+                @include mobile{
+                    font-size: 14px;
+                    text-align: center;
+                }
                 h1{
                     font-size: 3em;
                 }
@@ -156,6 +224,10 @@ body::-webkit-scrollbar {
                     background: white;
                     border: none;
                     @include blue-btn();
+                    @include tablet{
+                        font-size: 0.80em;
+                        height: 40px;
+                    }
                 }
             }
         }
@@ -184,10 +256,9 @@ body::-webkit-scrollbar {
             top:0; bottom:0; left:0; right:0;
             overflow: hidden;
             opacity: 0;
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
+            @include bg-set();
             transition: 1s;
+            
             &:first-child{
                 background-image: url('../img/atomypark_bg.jpg');
             }
@@ -211,18 +282,28 @@ body::-webkit-scrollbar {
             position: absolute;
             display: flex;
             flex-direction: column;
-            width: 1280px;
+            width: 1340px;
+            padding: 0 30px;
             margin: 0 auto;
+            @include global-width{
+                left: 0;
+                width: unset;
+            }
             &-con{
                 font-size: 24px;
                 color: white;
+                @include global-width{font-size: 21px;}
+                @include tablet{font-size: 18px;}
+                @include mobile{
+                    font-size: 14px;
+                    text-align: center;
+                }
                 h1{
                     font-size: 3em;
-                    
                 }
                 p{
                     font-size: 0.85em;
-                    margin: 15px 0 35px 0;
+                    margin: 15px 0 25px 0;
                 }
                 button{
                     font-size: 0.65em;
@@ -230,7 +311,13 @@ body::-webkit-scrollbar {
                     background: white;
                     border: none;
                     margin-right: 20px;
+                    margin: 0 auto;
+                    margin-top: 10px;
                     @include blue-btn();
+                    @include tablet{
+                        font-size: 0.80em;
+                        height: 40px;
+                    }
                 }
             }
         }
@@ -254,6 +341,7 @@ body::-webkit-scrollbar {
     }
     .csr{
         @include flex-box();
+        
         padding: 2em;
         position: relative;
         overflow: hidden;
@@ -265,54 +353,66 @@ body::-webkit-scrollbar {
             background: #f7f8fa;
         }
         &-article{
-            max-width: 1280px;
-            @include flex-box(space-between);
-            flex-wrap: wrap;
-            font-size: 20px;
-            padding: 1em;
+            width: 1320px;
+            font-size: 28px;
+            position: absolute;
+            overflow: hidden;
+            @include global-width{width: 100%;}
+            @include tablet{font-size: 21px;}
+            @include mobile{font-size: 14px;}
+            letter-spacing: -0.05em;
             h1{
                 width: 100%;
-                font-size: 3.5em;
+                font-size: 2.5em;
                 text-align: center;
-                margin: 75px 0 50px 0;
+                margin: 75px 0 70px 0;
             }
-            figure{
-                width: 32%;
-                flex-shrink: 1;
-                position: relative;
-                overflow: hidden;
-                img{
-                    width: 100%;
-                    vertical-align: bottom;
-                }
-                figcaption{
-                    position: absolute;
-                    top: 0; right: 0; left: 0; bottom:0;
-                    background: $main-color;
-                    opacity: 0.9;
-                    transform: translateY(75%);
-                    color: white;
-                    padding: 40px;
-                    transition: 0.3s ease-in-out;
-                    h2{
-                        height: 25%;
-                        font-weight: 500;
-                        font-size: 24px;
-                        letter-spacing: -0.1rem;
+            &-slide{
+                width: 100%;
+                @include tablet{width: 150%;}
+                @include mobile{width: 300%;}
+                @include flex-box(space-between);
+                flex-wrap: wrap;
+                padding: 0 20px;
+                figure{
+                    width: 31.5%;
+                    flex-shrink: 1;
+                    // padding: 0 20px;
+                    position: relative;
+                    overflow: hidden;
+                    img{
+                        width: 100%;
+                        vertical-align: bottom;
                     }
-                    p{
-                        font-size: 18px;
-                        padding-bottom: 1.7em;
-                        margin-bottom: 1.7em;
-                        border-bottom: 1px solid;
-                    }
-                }
-                transition: 0.3s ease-in-out;
-                &:hover{
-                    transform: translateY(-10%);
-                    box-shadow: rgba(0,0,0,0.5) 0 15px 5px;
                     figcaption{
-                        transform: translateY(0);
+                        position: absolute;
+                        top: 0; right: 0; left: 0; bottom:0;
+                        background: $main-color;
+                        opacity: 0.9;
+                        transform: translateY(75%);
+                        color: white;
+                        padding: 40px;
+                        transition: 0.3s ease-in-out;
+                        h2{
+                            height: 25%;
+                            font-weight: 500;
+                            font-size: 24px;
+                            letter-spacing: -0.1rem;
+                        }
+                        p{
+                            font-size: 18px;
+                            padding-bottom: 1.7em;
+                            margin-bottom: 1.7em;
+                            border-bottom: 1px solid;
+                        }
+                    }
+                    transition: 0.3s ease-in-out;
+                    &:hover{
+                        transform: translateY(-10%);
+                        box-shadow: rgba(0,0,0,0.3) 0 15px 8px;
+                        figcaption{
+                            transform: translateY(0);
+                        }
                     }
                 }
             }
@@ -320,13 +420,12 @@ body::-webkit-scrollbar {
     }
     .global{
         background-image: url('../img/worldwide_bg.jpg');
-        background-size: cover;
+        @include bg-set();
         align-items: flex-end;
         figure{
-            background-image: url('https://global.atomy.com/kr/img/main/worldwide_map.svg');
+            background-image: url('../img/worldwide_map.svg');
+            @include bg-set();
             background-size: contain;
-            background-position: center;
-            background-repeat: no-repeat;
             width: 100%;
             height: 90%;
         }
@@ -344,15 +443,15 @@ body::-webkit-scrollbar {
     }
     .news{
         background-image: url('../img/mCnts03_bg.jpg');
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
+        @include bg-set();
         @include flex-box();
         &-article{
-            width: 60%;
+            max-width: 1200px;
             @include flex-box();
             align-content: center;
             flex-wrap: wrap;
+            margin-top: 75px;
+            padding: 20px;
             &>div{
                 padding: 10px;
             }
@@ -360,19 +459,37 @@ body::-webkit-scrollbar {
                 width: 100%;
                 @include flex-box(flex-start);
                 align-items: flex-start;
+                @include mobile{
+                    flex-direction: column;
+                }
+                font-size: 20px;
+                @include desktop{
+                    font-size: 16px;
+                }
+                @include mobile{
+                    font-size: 14px;
+                }
                 figure{
-                    width: 55%;
+                    width: 70%;
                     background-image: url('../img/162815259512500.jpg');
-                    background-repeat: no-repeat;
-                    background-position: center;
-                    background-size: cover;
+                    @include bg-set();
                     padding-bottom: 35%;
                     height:0;
+                    @include tablet{
+                        display: none;
+                    }
+                    @include mobile{
+                        display: block;
+                        width: 90vw;
+                        padding-bottom: 55%;
+                        margin: 0 auto;
+                        margin-top: 150px;
+                    }
                 }
                 &>div{
                     color:white;
                     padding: 1em;
-                    font-size: 20px;
+                    font-size: 1em;
                     h2{
                         font-size: 3em;
                         line-height: 1em;
@@ -382,10 +499,15 @@ body::-webkit-scrollbar {
             }
             &-5, &-2, &-3, &-4{
                 width: 25%;
+                @include tablet{
+                    width: 50%;
+                }
+                @include mobile{
+                    width: 47vw;
+                }
                 figure{
                     background-image:url('../img/161827407554300.jpg');
-                    background-repeat: no-repeat;
-                    background-position: center;
+                    @include bg-set();
                     background-size: 100% 100%;
                     padding-bottom: 60%;
                     height: 0;

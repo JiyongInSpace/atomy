@@ -1,6 +1,6 @@
-$breakpoint-mobile: 335px;
-$breakpoint-tablet: 758px;
-$breakpoint-desktop: 1024px;
+$breakpoint-mobile: 479px;
+$breakpoint-tablet: 769px;
+$breakpoint-desktop: 1200px;
 
 $main-color: #04a6e1;
 
@@ -21,21 +21,40 @@ $main-color: #04a6e1;
     }
 }
 
-@mixin mobile {
-    @media (min-width: #{$breakpoint-mobile}) and (max-width: #{$breakpoint-tablet - 1px}) {
-        @content;
-        }
-    }
-    
-@mixin tablet {
-    @media (min-width: #{$breakpoint-tablet}) and (max-width: #{$breakpoint-desktop - 1px}) {
+@mixin bg-set {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+@mixin global-width {
+    @media (max-width: 1340px) {
         @content;
     }
 }
 
 @mixin desktop {
-    @media (min-width: #{$breakpoint-desktop}) {
+    @media (max-width: #{$breakpoint-desktop}) {
         @content;
     }
 }
+@mixin tablet {
+    @media (max-width: #{$breakpoint-tablet}) {
+        @content;
+    }
+}
+@mixin mobile {
+    @media (max-width: #{$breakpoint-mobile}) {
+        @content;
+    }
+}
+    
 
+@keyframes tongtong {
+    0% {
+        transform: translateY(-120%) scale(0.5);
+    }
+    100% {
+        transform: translateY(0) scale(0.5);
+    }
+}

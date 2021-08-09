@@ -20,9 +20,15 @@
 
     <article class="main-article">
         <div class="main">
-            <video muted autoplay loop>
+            <video muted autoplay loop class="main-video">
                 <source src="https://global.atomy.com/kr/img/main/mVisual_AV.mp4" type="video/mp4">
             </video>
+            <div class="main-scrollinfo">
+                <span class="main-scrollinfo-txt" >SCROLL DOWN</span>
+                <div class="main-scrollinfo-icon">
+                    <i class="fas fa-circle"></i>
+                </div>
+            </div>
         </div>
         <div class="about">
             <div class="about-bg"></div>
@@ -30,6 +36,11 @@
                 <div class="about-slide-img">
                     <div>
                         <img src="img/about_history_img01.jpg" alt="">
+                        <img src="img/about_history_img02.jpg" alt="">
+                        <img src="img/about_history_img03.jpg" alt="">
+                        <img src="img/about_history_img04.jpg" alt="">
+                        <img src="img/about_history_img05.jpg" alt="">
+                        <img src="img/about_history_img06.jpg" alt="">
                     </div>
                 </div>
                 <div class="about-slide-txt">
@@ -57,7 +68,7 @@
                     <button><i class="fas fa-arrow-down"></i></button>
                 </div>
             </section>
-        </div>
+        </div> 
         <div class="brand">
             <div class="brand-bg show"></div>
             <div class="brand-bg"></div>
@@ -96,23 +107,25 @@
             <div class="csr-bg"></div>
             <div class="csr-article">
                 <h1>Social Contribution</h1>
-                <figure>
-                    <img src="img/social_img01.jpg" alt="">
-                    <figcaption>
-                        <h2>미혼모 지원을 위한<br>[생소맘]기부자 조언기금 운용</h2>
-                        <p>2019년 6월, 애터미는 사랑의 열매<br> 사회복지공동모금회에 미혼모 지원을<br> 위해 100억 원을 기부했습니다.</p>자세히 보기
-                    </figcaption>
-                </figure>
-                <figure>
-                    <img src="img/social_img02.jpg" alt="">
-                    <figcaption><h2>실로암안과 학술연구원 건립 및<br>개안수술 지원</h2>
-                        <p>2019년 6월, 애터미는 사랑의 열매<br> 사회복지공동모금회에 미혼모 지원을<br> 위해 100억 원을 기부했습니다.</p>자세히 보기</figcaption>
-                </figure>
-                <figure>
-                    <img src="img/social_img03.jpg" alt="">
-                    <figcaption><h2>대만 까오슝<br>애터미 공익 마라톤</h2>
-                        <p>2019년 6월, 애터미는 사랑의 열매<br> 사회복지공동모금회에 미혼모 지원을<br> 위해 100억 원을 기부했습니다.</p>자세히 보기</figcaption>
-                </figure>
+                <div class="csr-article-slide">
+                    <figure>
+                        <img src="img/social_img01.jpg" alt="">
+                        <figcaption>
+                            <h2>미혼모 지원을 위한<br>[생소맘]기부자 조언기금 운용</h2>
+                            <p>2019년 6월, 애터미는 사랑의 열매<br> 사회복지공동모금회에 미혼모 지원을<br> 위해 100억 원을 기부했습니다.</p>자세히 보기
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="img/social_img02.jpg" alt="">
+                        <figcaption><h2>실로암안과 학술연구원 건립 및<br>개안수술 지원</h2>
+                            <p>2019년 6월, 애터미는 사랑의 열매<br> 사회복지공동모금회에 미혼모 지원을<br> 위해 100억 원을 기부했습니다.</p>자세히 보기</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="img/social_img03.jpg" alt="">
+                        <figcaption><h2>대만 까오슝<br>애터미 공익 마라톤</h2>
+                            <p>2019년 6월, 애터미는 사랑의 열매<br> 사회복지공동모금회에 미혼모 지원을<br> 위해 100억 원을 기부했습니다.</p>자세히 보기</figcaption>
+                    </figure>
+                </div>
             </div>
         </div> 
         <div class="global">
@@ -130,7 +143,7 @@
             <article class="news-article">
                 <div class="news-article-1">
                     <figure></figure>
-                    <div><h2>News<br>Room</h2>애터미 헤모힘, 7년 연속 업계 최고<br> 베스트셀러</div>
+                    <div><h2>News Room</h2>애터미 헤모힘, 7년 연속 업계 최고<br> 베스트셀러</div>
                 </div>
                 <div class="news-article-2">
                     <figure></figure>
@@ -152,6 +165,7 @@
         </div>
     </article>
 
+    
     <aside class="aside">
         <div class="aside-btns">
             <div><i class="fas fa-sort-up"></i>TOP</div>
@@ -160,6 +174,9 @@
         <div class="aside-hub" include-html="partial/aside.html">
         </div>
     </aside>
+    <button class="aside-s">
+        <i class="fas fa-angle-double-up"></i>
+    </button>
     <footer class="footer" include-html="partial/footer.html"></footer> 
 
     <script>
