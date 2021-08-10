@@ -27,8 +27,8 @@ $main-color: #04a6e1;
     background-repeat: no-repeat;
 }
 
-@mixin global-width {
-    @media (max-width: 1340px) {
+@mixin global-width($width: 1340px) {
+    @media (max-width: $width) {
         @content;
     }
 }

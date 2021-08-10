@@ -42,21 +42,31 @@
                 white-space: nowrap;
                 position: relative;
                 color:white;
+                
                 span{
-                    transition: 0.5s;
+                    font-weight: bold;
+                    transition: 0.3s;
+                    cursor: pointer;
                 }
-                &:hover span{
-                    color: $main-color;
+                &:hover{
+                    span{color: $main-color;}
+                    &>ul{
+                        color: white;
+                        div{
+                            height: 364px;
+                            opacity: 1;
+                        }
+                    }
                 }
                 &:nth-child(2){
                     width:190px;
                 }
                 &>ul{
+                    z-index: 2;
                     list-style: none;
                     position: absolute;
-                    top: 0px;
+                    top: 0px; left:0; right:0;
                     opacity: 0;
-                    left:0; right:0;
                     max-height: 0;
                     height: 365px;
                     padding: 25px 0px;
@@ -65,15 +75,29 @@
                         line-height: 1.6em;
                         padding: 7px 16px;
                         letter-spacing: -0.1em;
+                        cursor: pointer;
+                        &:hover{text-decoration: underline;}
                     }
                     &>ul{
                         list-style: none;
                         letter-spacing: -0.1em;
                         margin-left: 1.2em;
-                        &>li::before{
-                            content: '· ';
-                            
+                        li{
+                            position: relative;
+                            cursor: pointer;
+                            &::before{content: '· ';};
+                            &:hover{text-decoration: underline;}
                         }
+                    }
+                    &>div{
+                        position: absolute;
+                        top: 0px;
+                        width: 100%;
+                        height: 1px;
+                        opacity: 0;
+                        background-color: $main-color;
+                        transition: 0.5s;
+                        z-index: -0.5;
                     }
                 }
             }
@@ -84,25 +108,30 @@
         &-lang{
             z-index: 1;
             flex-grow: 1;
+            width: 18px;
             @include flex-box(flex-end);
-            
             height:100%;
             text-align: right;
             color:white;
             span{
+                cursor: pointer;
                 transition: 0.5s;
             }
             @include desktop{
                 flex-grow: 0;
                 order: 1;
             }
+            @include tablet{
+                margin-left: 1.5em;
+            }
         }
         &-burger{
             display: none;
             z-index: 1;
             color: white;
+            width: 18px;
+            text-align: right;
             @include desktop {
-                
                 display: block;
                 order: 3;
             }
@@ -266,13 +295,18 @@
         height: 100vh; width: 340px;
         background-color: #F7F8FA;
         z-index: 1;
-        h1{
+        &-title{
             height: 75px;
             padding: 23px 25px;
             @include flex-box(space-between);
             border-bottom: 1px solid #e9e7e7;
+            i{
+                cursor: pointer;
+                transition: 0.3s;
+                &:hover{transform: rotate(540deg);}
+            }
         }
-        &>ul{
+        &-content{
             list-style: none;
             text-align: center;
             overflow-y: scroll;
@@ -290,13 +324,15 @@
             padding: 0 0.5em 0 1em;
             &>li{
                 padding: 10px 0;
-                &:first-child{
-                    display: flex;
-                    width: 300px;
-                    margin: 0 auto;
-                    margin-top: 1.5em;
-                }
-                &>a{
+                position: relative;
+            }
+            &-myinfo{
+                display: flex;
+                width: 300px;
+                margin: 0 auto;
+                margin-top: 1.5em;
+                a{
+                    width: 50%;
                     display: inline-flex;
                     justify-content: center;
                     align-items: center;
@@ -305,9 +341,39 @@
                     background-color: white;
                     color: #767676;
                     text-decoration: none;
-                    font-weight: bold;
+                    span, span i{transition: 0.5s;}
+                    &:hover span{
+                        transform: scale(1.05);
+                        i{color: $main-color}
+                    }
                 }
             }
+            &-item{
+                img, div{cursor: pointer;}
+                
+                div{
+                    position: absolute;
+                    top: 47%;
+                    left: 30px;
+                    transform: translateY(-50%);
+                    text-align: start;
+                    h3{
+                        font-size: 1.4em;
+                        margin-bottom: 5px;
+                    }
+                    p{
+                        color: gray;
+                    }
+                    letter-spacing: -0.08em;
+                }
+                &:nth-child(2){
+                    color: white;
+                    p{
+                        color: white;
+                    }
+                }
+            }
+
             .sns{
                 list-style: none;
                 display: flex;
@@ -387,6 +453,9 @@
     &-address{
         font-style: normal;
         letter-spacing: -0.05em;
+        @include flex-box();
+        flex-wrap: wrap;
+        white-space: nowrap;
         margin-bottom: 3px;
         color: #d9d9d9;
         padding: 5px 0;

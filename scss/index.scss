@@ -9,10 +9,12 @@ body::-webkit-scrollbar {
 }
 .main-article{
     width: 100%;
+    // height: 100vh;
+    overflow: hidden;
     &>div{
         @include flex-box;
         height:100vh;
-        width: 100%;
+        width: 100vw;
         position:relative;
     }
     .main{
@@ -21,9 +23,8 @@ body::-webkit-scrollbar {
             z-index: 0;
             object-fit: fill;
             object-position: center;
-            @media (max-width: 1400px) {
-                height: 100%;
-                width: unset;
+            @media (min-width: 1920px) {
+                width: 100vw;
             }
         }
         &-scrollinfo{
@@ -49,6 +50,7 @@ body::-webkit-scrollbar {
         }
     }
     .about{
+        overflow: hidden;
         &-bg{
             position: absolute;
             width: 100%;
@@ -60,16 +62,19 @@ body::-webkit-scrollbar {
         &-slide{
             width: 1340px;
             padding: 0 30px;
+
             @include flex-box(center);
+            @include tablet{flex-direction: column;};
             &-img{
-                width: 570px;
-                height: 858px;
+                width: 400px;
+                height: 600px;
                 
                 vertical-align: bottom;
                 overflow: hidden;
                 div{
                     width: 100%;
-                    transform: translateY(-16.666% * 5);
+                    transition: 0.5s;
+                    transform: translateY(-12.5% * 1);
                     img{
                         width: 100%;
                         height: 100%;
@@ -77,8 +82,8 @@ body::-webkit-scrollbar {
                     }
                 }
                 @include global-width{
-                    width: 45vw;
-                    height: 66vw;
+                    width: 35vw;
+                    height: 52vw;
                 }
                 @include tablet{
                     position: absolute;
@@ -88,7 +93,7 @@ body::-webkit-scrollbar {
                     div{
                         @include flex-box();
                         flex-direction: column;
-                        transform: translateY(-16.666% * 5);
+                        // transform: translateY(-16.666% * 5);
                         img{
                             width: 100vw; height: 100vh;
                             margin: 0;
@@ -97,12 +102,20 @@ body::-webkit-scrollbar {
                 }
             }
             &-txt{
-                width: 50%;
-                @include flex-box(center);
+                width: 40%;
+                margin-right: -110px;
+                @include flex-box(flex-start);
+                margin-left: 5em;
+                @include tablet{
+                    margin: 0 auto;
+                };
                 &-list{
-                    padding-right: 2em;
+                    padding-left: 0;
                     &-item{
                         font-size: 16px;
+                        @include tablet{
+                            text-align: center;
+                        }
                         p:first-child{
                             font-size: 2.75em;
                             
@@ -112,7 +125,9 @@ body::-webkit-scrollbar {
                             span{
                                 font-size: 1em;
                             }
-                            
+                            @include tablet{
+                                color: #afacac;
+                            }
                         }
                         p:nth-child(2){
                             font-size: 1.4em;
@@ -140,6 +155,9 @@ body::-webkit-scrollbar {
                                 display: block;
                             }
                         }
+                        &.hide{
+                            display: none;
+                        }
                     }
                 }
             }
@@ -160,6 +178,18 @@ body::-webkit-scrollbar {
                 }
                 div, span, i{
                     font-size: 20px;
+                }
+                @include tablet{
+                    flex-direction: row;
+                    justify-content: center;
+                    height: 100px;
+                    button{
+                        transform: rotate(-90deg);
+                        padding: 15px;
+                    }
+                    div:nth-child(2){
+                        margin: 25px;
+                    }
                 }
             }
         }
@@ -365,10 +395,11 @@ body::-webkit-scrollbar {
                 width: 100%;
                 font-size: 2.5em;
                 text-align: center;
-                margin: 75px 0 70px 0;
+                margin: 75px 0 10px 0;
             }
             &-slide{
                 width: 100%;
+                
                 @include tablet{width: 150%;}
                 @include mobile{width: 300%;}
                 @include flex-box(space-between);
@@ -382,6 +413,7 @@ body::-webkit-scrollbar {
                     overflow: hidden;
                     img{
                         width: 100%;
+                        height: 50%;
                         vertical-align: bottom;
                     }
                     figcaption{
@@ -393,18 +425,25 @@ body::-webkit-scrollbar {
                         color: white;
                         padding: 40px;
                         transition: 0.3s ease-in-out;
+                        font-size: 20px;
                         h2{
                             height: 25%;
                             font-weight: 500;
-                            font-size: 24px;
+                            font-size: 1em;
                             letter-spacing: -0.1rem;
                         }
                         p{
-                            font-size: 18px;
+                            font-size: 0.8em;
                             padding-bottom: 1.7em;
                             margin-bottom: 1.7em;
                             border-bottom: 1px solid;
                         }
+                        span{
+                            font-size: 0.7em;
+                        }
+                        @include desktop{font-size: 1.5vw; padding: 30px;}
+                        @include tablet{font-size: 2.5vw; padding: 25px;}
+                        @include mobile{font-size: 5vw; padding: 20px;}
                     }
                     transition: 0.3s ease-in-out;
                     &:hover{
@@ -452,6 +491,7 @@ body::-webkit-scrollbar {
             flex-wrap: wrap;
             margin-top: 75px;
             padding: 20px;
+            @include mobile {margin-top: 0px;}
             &>div{
                 padding: 10px;
             }
@@ -470,10 +510,10 @@ body::-webkit-scrollbar {
                     font-size: 14px;
                 }
                 figure{
-                    width: 70%;
+                    width: 55%;
                     background-image: url('../img/162815259512500.jpg');
                     @include bg-set();
-                    padding-bottom: 35%;
+                    padding-bottom: 25%;
                     height:0;
                     @include tablet{
                         display: none;
@@ -488,28 +528,26 @@ body::-webkit-scrollbar {
                 }
                 &>div{
                     color:white;
-                    padding: 1em;
+                    padding-left: 1em;
                     font-size: 1em;
+                    white-space: pre;
+                    @include mobile {font-size: 3vw; white-space: normal;}
                     h2{
                         font-size: 3em;
                         line-height: 1em;
-                        margin-bottom: 1rem;
+                        margin-bottom: 0.5rem;
                     }
                 }
             }
             &-5, &-2, &-3, &-4{
                 width: 25%;
-                @include tablet{
-                    width: 50%;
-                }
-                @include mobile{
-                    width: 47vw;
-                }
+                @include tablet{width: 50%;}
+                @include mobile{width: 47vw;}
                 figure{
                     background-image:url('../img/161827407554300.jpg');
                     @include bg-set();
                     background-size: 100% 100%;
-                    padding-bottom: 60%;
+                    padding-bottom: 50%;
                     height: 0;
                     transition: 0.5s;
                     &:hover{
@@ -518,13 +556,14 @@ body::-webkit-scrollbar {
                     }
                 }
                 div{
-                    margin-top: 1em;
+                    margin-top: 0.2em;
                     font-size: 16px;
                     letter-spacing: -0.1em;
                     color: white;
                     overflow: hidden;
                     text-overflow: ellipsis;
                     white-space: nowrap;
+                    @include mobile {font-size: 0.85em}
                 }
             }
             &-2 figure{
@@ -542,4 +581,41 @@ body::-webkit-scrollbar {
             
         }
     }
+}
+
+.nav{
+    position: fixed;
+    right: 0;
+    bottom: 310px;
+    z-index: 1;
+    ul{
+        position: relative;
+        list-style: none;
+        color: #555;
+        text-align: right;
+        margin-right: 30px;
+        font-size: 16px;
+        font-weight: bold;
+        li{
+            transition: 0.5s;
+            font-size: 1em;
+            margin: 10px;
+            cursor: pointer;
+            &:hover{color: white;}
+            &.show{color: white;}
+        }
+        div{
+            position: absolute;
+            top: 13px;
+            right: -30px;
+            width: 30px;
+            height: 31.5px;
+            border-top: 2px solid white;
+            transition: 0.3s;
+            // transform: translateY(300%);
+        }
+        
+    }
+    transition: 0.5s;
+    @include desktop{transform: translateX(100%);}
 }
