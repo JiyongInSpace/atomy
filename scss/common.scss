@@ -59,6 +59,7 @@
                             height: 364px;
                             opacity: 1;
                         }
+                        li>a{color:white;}
                     }
                 }
                 &:nth-child(2){
@@ -80,6 +81,10 @@
                         letter-spacing: -0.1em;
                         cursor: pointer;
                         &:hover{text-decoration: underline;}
+                        a{
+                            transition: 0.5s; 
+                            color: black; 
+                        }
                     }
                     &>ul{
                         list-style: none;
@@ -212,7 +217,7 @@
         }
     }
 }
-
+// show1 스크롤, show2 호버, show3 모바일 버거
 .header.show, .header.show2, .header.show3{
     .header-con-logo img{
         transform: translateY(0);

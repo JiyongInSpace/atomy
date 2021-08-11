@@ -145,6 +145,10 @@
   opacity: 1;
 }
 
+.header-con-menu > li:hover > ul li > a {
+  color: white;
+}
+
 .header-con-menu > li:nth-child(2) {
   width: 190px;
 }
@@ -172,6 +176,12 @@
 
 .header-con-menu > li > ul > li:hover {
   text-decoration: underline;
+}
+
+.header-con-menu > li > ul > li a {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  color: black;
 }
 
 .header-con-menu > li > ul > ul {
