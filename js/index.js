@@ -7,8 +7,8 @@ const brandIndis = document.querySelectorAll(".brand-indi div");
 const parksTabs = document.querySelectorAll(".atomypark-bg");
 const parksIndis = document.querySelectorAll(".atomypark-indi div");
 
-// const brandBg = new Background(brandTabs, brandIndis, 6);
-// const atomyparkBg = new Background(parksTabs, parksIndis, 5);
+const brandBg = new Background(brandTabs, brandIndis, 6);
+const atomyparkBg = new Background(parksTabs, parksIndis, 5);
 
 
 // 스크롤시 등장 
