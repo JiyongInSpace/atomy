@@ -371,6 +371,24 @@
   font-size: 17px;
   letter-spacing: -0.05em;
   list-style: none;
+  color: black;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.header-s-menu-list > ul li a {
+  font-size: 17px;
+  color: black;
+}
+
+.header-s-menu-list > ul li:hover {
+  color: #04a6e1;
+  text-decoration: underline;
+}
+
+.header-s-menu-list > ul li:hover a {
+  color: #04a6e1;
 }
 
 .header-s-menu-list > ul ul > li {

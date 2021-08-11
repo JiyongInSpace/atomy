@@ -7,8 +7,8 @@ const brandIndis = document.querySelectorAll(".brand-indi div");
 const parksTabs = document.querySelectorAll(".atomypark-bg");
 const parksIndis = document.querySelectorAll(".atomypark-indi div");
 
-const brandBg = new Background(brandTabs, brandIndis, 4);
-const atomyparkBg = new Background(parksTabs, parksIndis, 3);
+// const brandBg = new Background(brandTabs, brandIndis, 6);
+// const atomyparkBg = new Background(parksTabs, parksIndis, 5);
 
 
 // 스크롤시 등장 
@@ -189,3 +189,23 @@ aboutSlideBtns.forEach((btn) => {
     btn.addEventListener("click", changeAboutNum);
 });
 addTxtActive(aboutNum);
+
+const indexUrl = "https://raw.githubusercontent.com/JiyongInSpace/atomy/main/data/data.json";
+function inIndex(){
+    fetch(indexUrl)
+    .then(res => res.json())
+    .then(data => callback(data));
+    function callback(data){
+        for(let i=5; i<13; i++){
+            aboutSlideImgs.innerHTML +=
+            `<img src="${data.about[i%6].img}" alt="">`;
+        };
+        for(let i=4; i<14; i++){
+            aboutSlideTxts[i-4].innerHTML =
+            `<p>${data.about[i%6].p1}</p>
+            <p>${data.about[i%6].p2}</p>
+            <p>${data.about[i%6].p3}</p>`;
+        };
+    }
+}
+window.addEventListener('load', inIndex);

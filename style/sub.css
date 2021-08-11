@@ -368,6 +368,11 @@ html {
   }
 }
 
+.sub-con.active .sub-con-title figcaption p:last-child i {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
 .sub-con.active .sub-con-title-clickblue {
   width: 100%;
 }

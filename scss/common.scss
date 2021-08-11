@@ -205,7 +205,14 @@
                         font-size: 17px;
                         letter-spacing: -0.05em;
                         list-style: none;
-                        
+                        color: black;
+                        transition: 0.5s;
+                        cursor: pointer;
+                        a{font-size:17px;color:black;}
+                        &:hover{
+                            color:$main-color; a{color:$main-color;};
+                            text-decoration: underline;
+                        }
                     }
                     ul>li{
                         padding-left: 3px;
