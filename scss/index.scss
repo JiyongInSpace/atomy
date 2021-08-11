@@ -73,7 +73,7 @@ body::-webkit-scrollbar {
                 overflow: hidden;
                 div{
                     width: 100%;
-                    transition: 0.5s;
+                    transition: 0.2s;
                     transform: translateY(-12.5% * 1);
                     img{
                         width: 100%;
@@ -102,12 +102,15 @@ body::-webkit-scrollbar {
                 }
             }
             &-txt{
-                width: 40%;
+                width: 50%;
                 margin-right: -110px;
                 @include flex-box(flex-start);
                 margin-left: 5em;
+                @include global-width(900px){margin-right: -3em;}
                 @include tablet{
                     margin: 0 auto;
+                    justify-content: center;
+                    width: 90%;
                 };
                 &-list{
                     padding-left: 0;
@@ -115,6 +118,7 @@ body::-webkit-scrollbar {
                         font-size: 16px;
                         @include tablet{
                             text-align: center;
+                            font-size: 10px;
                         }
                         p:first-child{
                             font-size: 2.75em;
@@ -183,6 +187,8 @@ body::-webkit-scrollbar {
                     flex-direction: row;
                     justify-content: center;
                     height: 100px;
+                    position: absolute;
+                    bottom: 30px;
                     button{
                         transform: rotate(-90deg);
                         padding: 15px;
@@ -235,6 +241,7 @@ body::-webkit-scrollbar {
             }
             &-con{
                 font-size: 24px;
+                transition: 1s;
                 @include global-width{font-size: 21px;}
                 @include tablet{font-size: 18px;}
                 @include mobile{
@@ -322,6 +329,7 @@ body::-webkit-scrollbar {
             &-con{
                 font-size: 24px;
                 color: white;
+                transition: 1s;
                 @include global-width{font-size: 21px;}
                 @include tablet{font-size: 18px;}
                 @include mobile{
@@ -396,6 +404,7 @@ body::-webkit-scrollbar {
                 font-size: 2.5em;
                 text-align: center;
                 margin: 75px 0 10px 0;
+                transition: 1s;
             }
             &-slide{
                 width: 100%;
@@ -462,13 +471,19 @@ body::-webkit-scrollbar {
         @include bg-set();
         align-items: flex-end;
         figure{
-            background-image: url('../img/worldwide_map.svg');
-            @include bg-set();
-            background-size: contain;
-            width: 100%;
-            height: 90%;
+            width: 100vw;
+            height: 100vh;
+            @include flex-box();
+            img{
+                height: 80%;
+                margin-top: 100px; 
+            }
         }
         &-tab{
+            position: absolute;
+            top: 75px;
+            left: 50%;
+            transform: translateX(-50%);
             @include flex-box();
             div{
                 width: 180px; height: 54px;
@@ -515,6 +530,7 @@ body::-webkit-scrollbar {
                     @include bg-set();
                     padding-bottom: 25%;
                     height:0;
+                    cursor: pointer;
                     @include tablet{
                         display: none;
                     }
@@ -550,9 +566,21 @@ body::-webkit-scrollbar {
                     padding-bottom: 50%;
                     height: 0;
                     transition: 0.5s;
+                    position: relative;
+                    cursor: pointer;
+                    div{
+                        @include flex-box();
+                        position: absolute;
+                        width:100%; top:-3px; bottom: 0;
+                        background-color: rgba(0,0,0,0.3);
+                        opacity: 0;
+                        transition: 0.5s;
+                    }
                     &:hover{
                         background-size: 110% 110%;
-                        filter: contrast(0.3);
+                        div{
+                            opacity: 1;
+                        }
                     }
                 }
                 div{
@@ -582,7 +610,6 @@ body::-webkit-scrollbar {
         }
     }
 }
-
 .nav{
     position: fixed;
     right: 0;
@@ -604,12 +631,15 @@ body::-webkit-scrollbar {
             &:hover{color: white;}
             &.show{color: white;}
         }
+        li:nth-child(2), li:nth-child(3), li:nth-child(5){
+            &.show{color: $main-color;}
+        }
         div{
             position: absolute;
             top: 13px;
             right: -30px;
             width: 30px;
-            height: 31.5px;
+            height: 30.5px;
             border-top: 2px solid white;
             transition: 0.3s;
             // transform: translateY(300%);

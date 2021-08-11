@@ -1,5 +1,6 @@
 import Background from './background.js'
 
+// page 3, 4 bankground
 const brandTabs = document.querySelectorAll(".brand-bg");
 const brandIndis = document.querySelectorAll(".brand-indi div");
 
@@ -10,6 +11,18 @@ const brandBg = new Background(brandTabs, brandIndis, 4);
 const atomyparkBg = new Background(parksTabs, parksIndis, 3);
 
 
+// 스크롤시 등장 
+const firstHides = document.querySelectorAll(".hide2");
+
+firstHides.forEach((item) => {
+    window.addEventListener("scroll", () => {
+        if(item.getBoundingClientRect().y <= window.innerHeight * 4/5){
+            item.classList.remove("hide2");
+        }
+    })
+})
+
+// page 우측 현재 위치 nav
 const navs = document.querySelectorAll(".nav-ul li");
 const navBar = document.querySelector(".nav-ul-bar");
 let pageNum = 0;
@@ -17,6 +30,7 @@ addPageColor();
 
 function addPageColor(){
     navs[pageNum].classList.add("show");
+    changePageColor(pageNum);
 }
 function removePageColor(){
     navs[pageNum].classList.remove("show");
@@ -52,6 +66,20 @@ function scrollPage(e){
     addPageColor();
     goToPage();
 };
+function changePageColor(num){
+    switch(num * 1){
+        case 1:
+        case 2:
+        case 4:
+            navBar.style.borderTop = "2px solid #04a6e1";
+            break;
+        default:
+            navBar.style.borderTop = "2px solid white";
+            break;
+    }
+}
+
+
 window.addEventListener("resize", goToPage);
 window.addEventListener("wheel", scrollPage, {passive : false});
 navs.forEach((nav, index) => {
@@ -59,6 +87,18 @@ navs.forEach((nav, index) => {
     nav.dataset.index = index;
 })
 
+// aside scrollToTop
+function WhenScrollToTop(){
+    if(pageYOffset < 1){
+        removePageColor();
+        pageNum = 0;
+        moveNavBar();
+        addPageColor();
+    }
+}
+window.addEventListener("scroll", WhenScrollToTop)
+
+// footer 보기
 const footer = document.querySelector(".footer");
 
 function showFooter(e){
@@ -78,7 +118,7 @@ function showFooter(e){
 window.addEventListener("wheel", showFooter);
 
 
-
+// page 2 slide 관련
 const aboutSlideImgs = document.querySelector(".about-slide-img div");
 const aboutSlideTxts = document.querySelectorAll(".about-slide-txt-list div");
 const aboutSlideBtns = document.querySelectorAll(".about-slide-btn button");
@@ -86,42 +126,63 @@ let aboutNum = 0;
 
 
 function slideImg(){
-    aboutSlideImgs.style.transition = "0.5s";
-    aboutSlideImgs.style.transform = `translateY(${-12.5 * (aboutNum+1)}%)`;
-}
-function slideImg2(){
-    aboutSlideImgs.style.transition = "none";
     aboutSlideImgs.style.transform = `translateY(${-12.5 * (aboutNum+1)}%)`;
 }
 function addTxtActive(aboutNum){
-    aboutSlideTxts[aboutNum+1].classList.add("active");
+    aboutSlideTxts[aboutNum+2].classList.add("active");
 }
 function removeTxtActive(aboutNum){
-    aboutSlideTxts[aboutNum+1].classList.remove("active");
+    aboutSlideTxts[aboutNum+2].classList.remove("active");
 }
 function hideTxt(){
     aboutSlideTxts.forEach((txt) => {
         txt.classList.add("hide");
     });
-    aboutSlideTxts[aboutNum].classList.remove("hide");
     aboutSlideTxts[aboutNum + 1].classList.remove("hide");
     aboutSlideTxts[aboutNum + 2].classList.remove("hide");
+    aboutSlideTxts[aboutNum + 3].classList.remove("hide");
 }
 hideTxt();
 
-function changeAboutNum(e){
+function fakeInfinite(){
     removeTxtActive(aboutNum);
-    if(this.className === "down"){
-        aboutNum++;
-        if(aboutNum > 5) aboutNum = 0;
-    } else {
-        aboutNum--;
-        if(aboutNum < 0) aboutNum = 5;
+    if(aboutNum > 5){
+        aboutNum = 0;
+    } else if(aboutNum < 0){
+        aboutNum = 5;
     }
+    hideTxt();
+    addTxtActive(aboutNum);
+    aboutSlideImgs.style.transition = "none";
+    aboutSlideImgs.style.transform = `translateY(${-12.5 * (aboutNum+1)}%)`;
+}
+function pageInfo(){
+    if(aboutNum+1 > 6){
+        document.querySelector(".about-slide-num").textContent = 1;
+    } else if(aboutNum+1 < 1){
+        document.querySelector(".about-slide-num").textContent = 6;
+    } else{
+        document.querySelector(".about-slide-num").textContent = aboutNum+1;
+    }
+}
+function changeAboutNum(){
+    removeTxtActive(aboutNum);
+    if(this.className === "down" && aboutNum <= 6){
+        aboutNum++;
+        if(aboutNum > 5){
+            setTimeout(fakeInfinite, 200);
+        }
+    } else if(this.className === "up" && aboutNum >= -1){
+        aboutNum--;
+        if(aboutNum < 0){
+            setTimeout(fakeInfinite, 200);
+        } 
+    }
+    aboutSlideImgs.style.transition = "0.2s";
     slideImg();
     hideTxt();
     addTxtActive(aboutNum);
-    document.querySelector(".about-slide-num").textContent = aboutNum+1;
+    pageInfo();
 }
 
 aboutSlideBtns.forEach((btn) => {

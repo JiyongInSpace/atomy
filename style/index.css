@@ -145,8 +145,8 @@ body::-webkit-scrollbar {
 
 .main-article .about-slide-img div {
   width: 100%;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
   -webkit-transform: translateY(-12.5%);
           transform: translateY(-12.5%);
 }
@@ -196,7 +196,7 @@ body::-webkit-scrollbar {
 }
 
 .main-article .about-slide-txt {
-  width: 40%;
+  width: 50%;
   margin-right: -110px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -210,9 +210,19 @@ body::-webkit-scrollbar {
   margin-left: 5em;
 }
 
+@media (max-width: 900px) {
+  .main-article .about-slide-txt {
+    margin-right: -3em;
+  }
+}
+
 @media (max-width: 769px) {
   .main-article .about-slide-txt {
     margin: 0 auto;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 90%;
   }
 }
 
@@ -227,6 +237,7 @@ body::-webkit-scrollbar {
 @media (max-width: 769px) {
   .main-article .about-slide-txt-list-item {
     text-align: center;
+    font-size: 10px;
   }
 }
 
@@ -340,6 +351,8 @@ body::-webkit-scrollbar {
         -ms-flex-pack: center;
             justify-content: center;
     height: 100px;
+    position: absolute;
+    bottom: 30px;
   }
   .main-article .about-slide-btn button {
     -webkit-transform: rotate(-90deg);
@@ -421,6 +434,8 @@ body::-webkit-scrollbar {
 
 .main-article .brand-product-con {
   font-size: 24px;
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 
 @media (max-width: 1340px) {
@@ -571,6 +586,8 @@ body::-webkit-scrollbar {
 .main-article .atomypark-info-con {
   font-size: 24px;
   color: white;
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 
 @media (max-width: 1340px) {
@@ -711,6 +728,8 @@ body::-webkit-scrollbar {
   font-size: 2.5em;
   text-align: center;
   margin: 75px 0 10px 0;
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 
 .main-article .csr-article-slide {
@@ -836,16 +855,30 @@ body::-webkit-scrollbar {
 }
 
 .main-article .global figure {
-  background-image: url("../img/worldwide_map.svg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  width: 100%;
-  height: 90%;
+  width: 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main-article .global figure img {
+  height: 80%;
+  margin-top: 100px;
 }
 
 .main-article .global-tab {
+  position: absolute;
+  top: 75px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -973,6 +1006,7 @@ body::-webkit-scrollbar {
   background-repeat: no-repeat;
   padding-bottom: 25%;
   height: 0;
+  cursor: pointer;
 }
 
 @media (max-width: 769px) {
@@ -1037,12 +1071,36 @@ body::-webkit-scrollbar {
   height: 0;
   -webkit-transition: 0.5s;
   transition: 0.5s;
+  position: relative;
+  cursor: pointer;
+}
+
+.main-article .news-article-5 figure div, .main-article .news-article-2 figure div, .main-article .news-article-3 figure div, .main-article .news-article-4 figure div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  width: 100%;
+  top: -3px;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .main-article .news-article-5 figure:hover, .main-article .news-article-2 figure:hover, .main-article .news-article-3 figure:hover, .main-article .news-article-4 figure:hover {
   background-size: 110% 110%;
-  -webkit-filter: contrast(0.3);
-          filter: contrast(0.3);
+}
+
+.main-article .news-article-5 figure:hover div, .main-article .news-article-2 figure:hover div, .main-article .news-article-3 figure:hover div, .main-article .news-article-4 figure:hover div {
+  opacity: 1;
 }
 
 .main-article .news-article-5 div, .main-article .news-article-2 div, .main-article .news-article-3 div, .main-article .news-article-4 div {
@@ -1112,12 +1170,16 @@ body::-webkit-scrollbar {
   color: white;
 }
 
+.nav ul li:nth-child(2).show, .nav ul li:nth-child(3).show, .nav ul li:nth-child(5).show {
+  color: #04a6e1;
+}
+
 .nav ul div {
   position: absolute;
   top: 13px;
   right: -30px;
   width: 30px;
-  height: 31.5px;
+  height: 30.5px;
   border-top: 2px solid white;
   -webkit-transition: 0.3s;
   transition: 0.3s;

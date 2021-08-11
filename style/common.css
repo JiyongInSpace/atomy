@@ -35,6 +35,10 @@
   z-index: 1;
 }
 
+.header:hover {
+  z-index: 2;
+}
+
 .header-con {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -816,5 +820,9 @@
 .footer-copyright {
   letter-spacing: -0.05em;
   color: #999999;
+}
+
+.hide2 {
+  opacity: 0;
 }
 /*# sourceMappingURL=common.css.map */
