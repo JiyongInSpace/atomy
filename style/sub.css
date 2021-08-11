@@ -108,6 +108,7 @@ html {
   cursor: pointer;
   position: relative;
   width: 1280px;
+  overflow: hidden;
   height: 280px;
   background-size: cover;
   background-position: center;
@@ -374,7 +375,7 @@ html {
 }
 
 .sub-con.active .sub-con-title-clickblue {
-  width: 100%;
+  width: 103%;
 }
 
 .sub-con.active .sub-con-title-borderhover div {
