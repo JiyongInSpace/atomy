@@ -66,6 +66,21 @@ function scrollPage(e){
     addPageColor();
     goToPage();
 };
+function scrollPageOnWorldmap(e){
+    e.preventDefault();
+    if(e.pageY !== e.clientY){
+        return;
+    } else if(e.deltaY > 0 && pageNum < 6){
+        removePageColor();
+        pageNum = 6;
+    } else if(e.deltaY < 0 && pageNum > 0){
+        removePageColor();
+        pageNum = 4;
+    }
+    moveNavBar();
+    addPageColor();
+    goToPage();
+};
 function changePageColor(num){
     switch(num * 1){
         case 1:
@@ -77,14 +92,20 @@ function changePageColor(num){
             navBar.style.borderTop = "2px solid white";
             break;
     }
-}
-
+};
 
 window.addEventListener("resize", goToPage);
 window.addEventListener("wheel", scrollPage, {passive : false});
 navs.forEach((nav, index) => {
     nav.addEventListener("click", pageNow);
     nav.dataset.index = index;
+})
+
+// world map 위에서 scroll 관련
+window.addEventListener('load', () => {
+    const worldMap = document.querySelector(".world-map");
+    const svgDoc = worldMap.contentDocument;
+    svgDoc.addEventListener("wheel", scrollPageOnWorldmap, {passive : false});
 })
 
 // aside scrollToTop
@@ -209,3 +230,4 @@ function inIndex(){
     }
 }
 window.addEventListener('load', inIndex);
+
