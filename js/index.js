@@ -102,7 +102,7 @@ window.addEventListener("scroll", WhenScrollToTop)
 const footer = document.querySelector(".footer");
 
 function showFooter(e){
-    if(e.deltaY < 0 && (document.documentElement.offsetHeight - window.innerHeight <= window.scrollY)){
+    if(e.deltaY < 0 && (document.documentElement.offsetHeight - window.innerHeight <= window.scrollY+2)){
         navBar.style.opacity = 1;
         addPageColor();
         goToPage();
