@@ -104,5 +104,73 @@
             "p1": "<span>15.0</span>mlillion", "p2": "Global Members",
             "p3": "글로벌 회원은 1500만명을 돌파하여<br>매년 꾸준한 성장세를 보이고있습니다."
         }
+    ],
+    "global":[
+        {
+            "class":"hq", "country":"Korea", "adress":"(32543) 2148-21, Baekjemunhwa-ro, Gongju-si, Chungcheongnam-do, Republic of Korea", "number":"TEL +82-1544-8580<br>FAX +82-2-888-4802<br>E-MAIL atomy@atomy.kr<br>www.atomy.kr"
+        },
+        {
+            "class":"na", "country":"USA", "adress":"33801 1st Way South #301 Federal Way, WA 98003 U.S.A", "number":"TEL +1-253-946-2344<br>FAX +1-253-946-2345<br>E-MAIL usa@atomy.kr<br>www.atomy.com/us"
+        },
+        {
+            "class":"ap", "country":"Japan", "adress":"Hamacho park side MIN Bldg. 47-3 Nihonbasi Hamacho 2-chome, Chuo-Ku, TOKYO, JAPAN", "number":"TEL +81-3-6806-8640<br>FAX +81-3-6806-8641<br>E-MAIL atomyjp@atomy.kr<br>www.atomy.com/jp"
+        },
+        {
+            "class":"na", "country":"Canada", "adress":"(32543) 2148-21, Baekjemunhwa-ro, Gongju-si, Chungcheongnam-do, Republic of Korea", "number":"TEL +82-1544-8580<br>FAX +82-2-888-4802<br>E-MAIL atomy@atomy.kr<br>www.atomy.kr"
+        },
+        {
+            "class":"ap", "country":"Taiwan", "adress":"(32543) 2148-21, Baekjemunhwa-ro, Gongju-si, Chungcheongnam-do, Republic of Korea", "number":"TEL +82-1544-8580<br>FAX +82-2-888-4802<br>E-MAIL atomy@atomy.kr<br>www.atomy.kr"
+        },
+        {
+            "class":"ap", "country":"Singapore", "adress":"(32543) 2148-21, Baekjemunhwa-ro, Gongju-si, Chungcheongnam-do, Republic of Korea", "number":"TEL +82-1544-8580<br>FAX +82-2-888-4802<br>E-MAIL atomy@atomy.kr<br>www.atomy.kr"
+        },
+        {
+            "class":"ap", "country":"Cambodia", "adress":"(32543) 2148-21, Baekjemunhwa-ro, Gongju-si, Chungcheongnam-do, Republic of Korea", "number":"TEL +82-1544-8580<br>FAX +82-2-888-4802<br>E-MAIL atomy@atomy.kr<br>www.atomy.kr"
+        },
+        {
+            "class":"ap", "country":"Philippines", "adress":"(32543) 2148-21, Baekjemunhwa-ro, Gongju-si, Chungcheongnam-do, Republic of Korea", "number":"TEL +82-1544-8580<br>FAX +82-2-888-4802<br>E-MAIL atomy@atomy.kr<br>www.atomy.kr"
+        },
+        {
+            "class":"ap", "country":"Malaysia", "adress":"(32543) 2148-21, Baekjemunhwa-ro, Gongju-si, Chungcheongnam-do, Republic of Korea", "number":"TEL +82-1544-8580<br>FAX +82-2-888-4802<br>E-MAIL atomy@atomy.kr<br>www.atomy.kr"
+        },
+        {
+            "class":"csa", "country":"Mexico", "adress":"(32543) 2148-21, Baekjemunhwa-ro, Gongju-si, Chungcheongnam-do, Republic of Korea", "number":"TEL +82-1544-8580<br>FAX +82-2-888-4802<br>E-MAIL atomy@atomy.kr<br>www.atomy.kr"
+        },
+        {
+            "class":"ap", "country":"Thailand", "adress":"(32543) 2148-21, Baekjemunhwa-ro, Gongju-si, Chungcheongnam-do, Republic of Korea", "number":"TEL +82-1544-8580<br>FAX +82-2-888-4802<br>E-MAIL atomy@atomy.kr<br>www.atomy.kr"
+        },
+        {
+            "class":"ap", "country":"Australia", "adress":"(32543) 2148-21, Baekjemunhwa-ro, Gongju-si, Chungcheongnam-do, Republic of Korea", "number":"TEL +82-1544-8580<br>FAX +82-2-888-4802<br>E-MAIL atomy@atomy.kr<br>www.atomy.kr"
+        },
+        {
+            "class":"ap", "country":"Indonesia", "adress":"(32543) 2148-21, Baekjemunhwa-ro, Gongju-si, Chungcheongnam-do, Republic of Korea", "number":"TEL +82-1544-8580<br>FAX +82-2-888-4802<br>E-MAIL atomy@atomy.kr<br>www.atomy.kr"
+        },
+        {
+            "class":"eu", "country":"Russia", "adress":"(32543) 2148-21, Baekjemunhwa-ro, Gongju-si, Chungcheongnam-do, Republic of Korea", "number":"TEL +82-1544-8580<br>FAX +82-2-888-4802<br>E-MAIL atomy@atomy.kr<br>www.atomy.kr"
+        },
+        {
+            "class":"ap", "country":"China", "adress":"(32543) 2148-21, Baekjemunhwa-ro, Gongju-si, Chungcheongnam-do, Republic of Korea", "number":"TEL +82-1544-8580<br>FAX +82-2-888-4802<br>E-MAIL atomy@atomy.kr<br>www.atomy.kr"
+        },
+        {
+            "class":"csa", "country":"Colombia", "adress":"(32543) 2148-21, Baekjemunhwa-ro, Gongju-si, Chungcheongnam-do, Republic of Korea", "number":"TEL +82-1544-8580<br>FAX +82-2-888-4802<br>E-MAIL atomy@atomy.kr<br>www.atomy.kr"
+        },
+        {
+            "class":"ap", "country":"Hong Kong", "adress":"(32543) 2148-21, Baekjemunhwa-ro, Gongju-si, Chungcheongnam-do, Republic of Korea", "number":"TEL +82-1544-8580<br>FAX +82-2-888-4802<br>E-MAIL atomy@atomy.kr<br>www.atomy.kr"
+        },
+        {
+            "class":"ap", "country":"India", "adress":"(32543) 2148-21, Baekjemunhwa-ro, Gongju-si, Chungcheongnam-do, Republic of Korea", "number":"TEL +82-1544-8580<br>FAX +82-2-888-4802<br>E-MAIL atomy@atomy.kr<br>www.atomy.kr"
+        },
+        {
+            "class":"ap", "country":"New Zealand", "adress":"(32543) 2148-21, Baekjemunhwa-ro, Gongju-si, Chungcheongnam-do, Republic of Korea", "number":"TEL +82-1544-8580<br>FAX +82-2-888-4802<br>E-MAIL atomy@atomy.kr<br>www.atomy.kr"
+        },
+        {
+            "class":"eu", "country":"Turkey", "adress":"(32543) 2148-21, Baekjemunhwa-ro, Gongju-si, Chungcheongnam-do, Republic of Korea", "number":"TEL +82-1544-8580<br>FAX +82-2-888-4802<br>E-MAIL atomy@atomy.kr<br>www.atomy.kr"
+        },
+        {
+            "class":"eu", "country":"United Kingdom", "adress":"(32543) 2148-21, Baekjemunhwa-ro, Gongju-si, Chungcheongnam-do, Republic of Korea", "number":"TEL +82-1544-8580<br>FAX +82-2-888-4802<br>E-MAIL atomy@atomy.kr<br>www.atomy.kr"
+        },
+        {
+            "class":"ap", "country":"Vietnam", "adress":"(32543) 2148-21, Baekjemunhwa-ro, Gongju-si, Chungcheongnam-do, Republic of Korea", "number":"TEL +82-1544-8580<br>FAX +82-2-888-4802<br>E-MAIL atomy@atomy.kr<br>www.atomy.kr"
+        }
     ]
 }
