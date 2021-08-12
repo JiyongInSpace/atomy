@@ -470,29 +470,87 @@ body::-webkit-scrollbar {
         background-image: url('../img/worldwide_bg.jpg');
         @include bg-set();
         align-items: flex-end;
-        figure{
-            width: 100vw;
-            height: 100vh;
-            @include flex-box();
-            .world-map{
-                height: 80%;
-                margin-top: 100px; 
-            }
-        }
         &-tab{
             position: absolute;
             top: 75px;
             left: 50%;
             transform: translateX(-50%);
-            @include flex-box();
-            div{
-                width: 180px; height: 54px;
+            width: 1340px;
+            padding: 0 30px;
+            @include flex-box(space-between);
+            @include global-width{width: 100%;}
+            &-btn{
+                width: 180px;
+                flex-grow: 1; 
+                height: 54px;
                 margin: 1em 10px;
                 @include flex-box();
                 background: rgba(255, 255, 255, 0.4);
                 text-align: center;
                 @include blue-btn();
             }
+            &-world{
+                position: absolute;
+                margin: 0 auto;
+                top: 20px; left: 50%;
+                transform: translateX(-50%);
+                width: 1260px;
+                padding: 10px;
+                background: rgba(255, 255, 255, 0.4);
+                display: none;
+                @include global-width{width: calc(100% - 80px);}
+                &-back{
+                    @include flex-box();
+                    padding: 10px;
+                    cursor: pointer;
+                    div:first-child{
+                        width: 45px; height: 45px;
+                        margin-right: 10px;
+                        background-color: #133a4c;
+                        color: white;
+                        border-radius: 3em;
+                        @include flex-box();
+                        i{font-size: 1.7em;}
+                    }
+                }
+                div:first-child{
+                    flex-shrink: 0;
+                }
+                div:last-child{
+                    @include flex-box();
+                    flex-grow: 1;
+                    flex-wrap: wrap;
+                    p{margin: 5px 15px; cursor: pointer;
+                    &:hover{text-decoration: underline;}}
+                }
+            }
+            &.active{
+                .global-tab-btn{display: none;}
+                .global-tab-world{display: flex;}
+            }
+            @include tablet{display: none;}
+
+        }
+        figure{
+            width: 100vw;
+            height: 100vh;
+            @include flex-box();
+            .world-map{
+                height: 80%;
+                margin-top: 100px;
+                @include desktop{height: unset; width: 90%;}
+            }
+        }
+        &-select{
+            position: absolute;
+            top: 105px;
+            left: 25px;
+            padding: 10px;
+            display: none;
+            border: none;
+            color: rgba(0, 0, 0, 0.8);
+            background-color: rgba(255, 255, 255, 0.4);
+            @include tablet{display: block;}
         }
     }
     .news{

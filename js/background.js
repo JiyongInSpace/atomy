@@ -10,6 +10,10 @@ export default class Background{
                 this.changeBg(this.idx, index);
                 this.idx = index;
             });
+            indi.addEventListener("touchend", () => {
+                this.changeBg(this.idx, index);
+                this.idx = index;
+            });
         });
 
         setInterval(() => this.autoChangeBg(), this.time);

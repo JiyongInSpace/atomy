@@ -116,16 +116,24 @@
             </div>
         </div> 
         <div class="global">
-            <figure>
-                <div class="global-tab">
-                    <div data-world="hq">HQ</div>
-                    <div data-world="ap">Asia-Pacific</div>
-                    <div data-world="na">North America</div>
-                    <div data-world="csa">Central & South<br>America</div>
-                    <div data-world="eu">Europe</div>
+            <div class="global-tab">
+                <div class="global-tab-btn" data-world="hq">HQ</div>
+                <div class="global-tab-btn" data-world="ap">Asia-Pacific</div>
+                <div class="global-tab-btn" data-world="na">North America</div>
+                <div class="global-tab-btn" data-world="csa">Central & South<br>America</div>
+                <div class="global-tab-btn" data-world="eu">Europe</div>
+                <div class="global-tab-world">
+                    <div class="global-tab-world-back">
+                        <div><i class="fas fa-map-marked-alt"></i></div>
+                        <div>World Map</div>
+                    </div>
+                    <div class="global-tab-world-list"></div>
                 </div>
+            </div>
+            <figure>
                 <object class="world-map" data="img/worldwide_map.svg" type="image/svg+xml"></object>
             </figure>
+            <select class="global-select"></select>
         </div>
         <div class="news">
             <article class="news-article">

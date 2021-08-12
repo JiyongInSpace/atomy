@@ -22,10 +22,11 @@ firstHides.forEach((item) => {
     })
 })
 
-// page 우측 현재 위치 nav
+// 사이트 page 넘기기 및 현재 위치 알려주는 nav
 const navs = document.querySelectorAll(".nav-ul li");
 const navBar = document.querySelector(".nav-ul-bar");
 let pageNum = 0;
+let mouseNum = 0;
 addPageColor();
 
 function addPageColor(){
@@ -50,10 +51,15 @@ function pageNow(){
 function goToPage(){
     const y = window.innerHeight;
     window.scrollTo({ top: y * pageNum, behavior: "smooth"});
+    mouseNum = 0;
 }
+
 function scrollPage(e){
     e.preventDefault();
+    
     if(e.pageY-e.clientY > innerHeight*pageNum + 5 || e.pageY-e.clientY < innerHeight*pageNum - 5){
+        mouseNum++;
+        if(mouseNum > 7){goToPage();mouseNum=0;}
         return;
     } else if(e.deltaY > 0 && pageNum < 6){
         removePageColor();
@@ -66,6 +72,7 @@ function scrollPage(e){
     addPageColor();
     goToPage();
 };
+
 function scrollPageOnWorldmap(e){
     e.preventDefault();
     if(e.pageY !== e.clientY){
@@ -81,6 +88,7 @@ function scrollPageOnWorldmap(e){
     addPageColor();
     goToPage();
 };
+
 function changePageColor(num){
     switch(num * 1){
         case 1:
@@ -101,12 +109,47 @@ navs.forEach((nav, index) => {
     nav.dataset.index = index;
 })
 
-// world map 위에서 scroll 관련
+// world map 위에서 event
 window.addEventListener('load', () => {
     const worldMap = document.querySelector(".world-map");
     const svgDoc = worldMap.contentDocument;
+
+    //wheel
     svgDoc.addEventListener("wheel", scrollPageOnWorldmap, {passive : false});
+    
+    //wheel button
+    svgDoc.addEventListener("mousedown", (e) => {
+        if(e.button !== 1) return;
+        e.preventDefault();
+    });
+
+    //touch
+    svgDoc.addEventListener("touchmove", (e) => {e.preventDefault()}, {passive : false});
+
+    let globalStartY, globalEndY;
+    function globalTouchStart(e){
+        globalStartY = e.touches[0].pageY;
+    }
+    function globalTouchEnd(e){
+        globalEndY = e.changedTouches[0].pageY;
+        e.preventDefault();
+        if(globalStartY - globalEndY > 50){
+            pageNum = 6;
+        } else if(globalStartY - globalEndY < -50){
+            pageNum = 4;
+        }
+        goToPage();
+    }
+    svgDoc.addEventListener("touchstart", globalTouchStart);
+    svgDoc.addEventListener("touchend", globalTouchEnd);
 })
+
+// 휠버튼 막기
+window.addEventListener("mousedown", (e) => {
+    if(e.button !== 1) return;
+    e.preventDefault();
+})
+
 
 // aside scrollToTop
 function WhenScrollToTop(){
@@ -119,10 +162,10 @@ function WhenScrollToTop(){
 }
 window.addEventListener("scroll", WhenScrollToTop)
 
-// footer 보기
+// footer 보기(휠)
 const footer = document.querySelector(".footer");
 
-function showFooter(e){
+function showFooter(e){ 
     if(e.deltaY < 0 && (document.documentElement.offsetHeight - window.innerHeight <= window.scrollY+2)){
         navBar.style.opacity = 1;
         addPageColor();
@@ -137,6 +180,7 @@ function showFooter(e){
     }
 }
 window.addEventListener("wheel", showFooter);
+
 
 
 // page 2 slide 관련
@@ -208,6 +252,7 @@ function changeAboutNum(){
 
 aboutSlideBtns.forEach((btn) => {
     btn.addEventListener("click", changeAboutNum);
+    btn.addEventListener("touchend", changeAboutNum);
 });
 addTxtActive(aboutNum);
 
@@ -231,3 +276,29 @@ function inIndex(){
 }
 window.addEventListener('load', inIndex);
 
+// 모바일 touch
+let startY, endY;
+function touchStart(e){
+    startY = e.touches[0].pageY;
+}
+function touchEnd(e){
+    endY = e.changedTouches[0].pageY;
+    e.preventDefault();
+    if(startY - endY > 50 && pageNum < 6){
+        pageNum++;
+    } else if(startY - endY < -50 && pageNum > 0){
+        pageNum--;
+    }
+    goToPage();
+}
+function showFooterMobile(e){
+    if(startY - endY > 50 && (e.changedTouches[0].pageY - e.changedTouches[0].clientY == innerHeight * 6)){
+        window.scrollBy({ top: 500, left: 0, behavior: "smooth"});
+    } else {
+        goToPage();
+    }
+}
+window.addEventListener("touchstart", touchStart);
+window.addEventListener("touchend", touchEnd);
+window.addEventListener("touchend", showFooterMobile);
+window.addEventListener("touchmove", (e) => {e.preventDefault()}, {passive : false})

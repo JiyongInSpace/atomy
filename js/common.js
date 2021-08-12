@@ -38,7 +38,8 @@ function openMobileMenu(e){
 }
 header.addEventListener("click", showMobileMenu);
 header.addEventListener("click", openMobileMenu);
-
+header.addEventListener("touchend", showMobileMenu);
+header.addEventListener("touchend", openMobileMenu);
 
 // aside 기능
 const aside = document.querySelector(".aside");
@@ -73,6 +74,10 @@ smallTopBtn.addEventListener("click", scrollToTop);
 aside.addEventListener("click", exitHubTab);
 showBtn.addEventListener("click", toggleHubTab);
 topBtn.addEventListener("click", scrollToTop);
+smallTopBtn.addEventListener("touchend", scrollToTop);
+aside.addEventListener("touchend", exitHubTab);
+showBtn.addEventListener("touchend", toggleHubTab);
+topBtn.addEventListener("touchend", scrollToTop);
 window.addEventListener("scroll", showTopBtn);
 
 history.scrollRestoration = "manual";
