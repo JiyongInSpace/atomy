@@ -1,3 +1,11 @@
+// mobile size 관련
+let vh = window.innerHeight * 0.01;
+document.documentElement.style.setProperty("--vh", `${vh}px`);
+window.addEventListener("resize", ()=>{
+    vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty("--vh", `${vh}px`);
+})
+
 // header 기능
 const header = document.querySelector(".header");
 function headerChangeByScroll(){

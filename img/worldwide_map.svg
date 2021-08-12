@@ -7,15 +7,15 @@
 	.st1{fill:white;}
 	.st2{fill:#A8DBF6;}
 	.hq, .na, .csa, .eu, .ap{transition: 0.5s;}
-	.hq.active, .na.active, .csa.active, .eu.active, .ap.active{fill:#04a6e1;}
-
+	.hq.active, .na.active, .csa.active, .eu.active, .ap.active, .hq.active1, .na.active1, .csa.active1, .eu.active1, .ap.active1{fill:#04a6e1;}
+	
 	.line{stroke:white; stroke-width:2;}
 	.line.hq, .line.na, .line.csa, .line.eu, .line.ap{opacity: 0;}
-	.line.hq.active, .line.na.active, .line.csa.active, .line.eu.active, .line.ap.active{opacity: 1;}
+	.line.active,.line.active1{opacity: 1;} -->
 
 	.text{font-size:3rem; font-weight:bold;}
 	.text.hq, .text.na, .text.csa, .text.eu, .text.ap{opacity: 0; fill: #103a4e;}
-	.text.hq.active, .text.na.active, .text.csa.active, .text.eu.active, .text.ap.active{opacity: 1; }
+	.text.active, .text.active1{opacity: 1;}
 </style>
 <g id="Layer_1">
 	<path class="st0" d="M95.8,394c0-1,2.3-1.3,1.4-2.3s-9.9-9.6-18.3-15.9c-1.7-1.3-3.6-2.6-5.6-4h-9l1.6,29L67,402l-2.2,4.4
