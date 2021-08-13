@@ -94,27 +94,35 @@ globalTabBtns.forEach((btn) => {
     btn.addEventListener("click", callGlobalList);
 })
 
-function callGlobalInfo(e){
+function showInfo(item){
+    countryInfo.innerHTML = 
+    `<div class="global-info-txt">
+        <span>${item.class}</span><h2>${item.country}</h2>
+        <p>${item.adress}</p><p>${item.number}</p>
+    </div>
+    <div class="global-info-btn">
+        <button>Shopping Mall</button> <button>Member Guide</button>
+    </div>`;
+}
+
+function clickGlobalInfo(e){
     if(e.target.tagName !== "P") return;
     countryInfo.classList.add("active");
     fetch(indexUrl)
     .then(res => res.json())
     .then(data => callback(data, e.target.dataset.code));
     function callback(data, code){
-        data.global.forEach((item) => {
-            if(code === item.code){
-                countryInfo.innerHTML = 
-                `<div class="global-info-txt">
-                    <span>${item.class}</span><h2>${item.country}</h2>
-                    <p>${item.adress}</p><p>${item.number}</p>
-                </div>
-                <div class="global-info-btn">
-                    <button>Shopping Mall</button> <button>Member Guide</button>
-                </div>`;
-            }
-        })
+        data.global.forEach((item) => {if(code === item.code)showInfo(item);})
     }
 }
-worldList.addEventListener("click", callGlobalInfo);
+worldList.addEventListener("click", clickGlobalInfo);
 
-
+function selectGlobalInfo(e){
+    fetch(indexUrl)
+    .then(res => res.json())
+    .then(data => callback(data, e.target.value));
+    function callback(data, country){
+        data.global.forEach((item) => {if(country === item.country)showInfo(item);})
+    }
+}
+globalSelect.addEventListener("change", selectGlobalInfo)

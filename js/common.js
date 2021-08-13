@@ -74,9 +74,7 @@ function showTopBtn(){
         topBtn.classList.remove("show");
         smallTopBtn.classList.remove("show");
     }
-    
 }
-
 
 smallTopBtn.addEventListener("click", scrollToTop);
 aside.addEventListener("click", exitHubTab);

@@ -255,9 +255,10 @@ aboutSlideBtns.forEach((btn) => {
 });
 addTxtActive(aboutNum);
 
-// about데이터
+// 데이터 json
 const indexUrl = "https://raw.githubusercontent.com/JiyongInSpace/atomy/main/data/data.json";
 const newsArticle = document.querySelector(".news-article");
+const csrArticleSlide = document.querySelector(".csr-article-slide");
 function inIndex(){
     fetch(indexUrl)
     .then(res => res.json())
@@ -273,6 +274,15 @@ function inIndex(){
             <p>${data.about[i%6].p2}</p>
             <p>${data.about[i%6].p3}</p>`;
         };
+        data.csr.forEach((item) => {
+            csrArticleSlide.innerHTML += 
+            `<figure>
+                <img src="img/${item.img}" alt="">
+                <figcaption>
+                    <h2>${item.title}</h2><p>${item.detail}</p><span>자세히 보기</span>
+                </figcaption>
+            </figure>`;
+        })
         data.news.forEach((item, index) => {
             newsArticle.innerHTML += 
             `<div class="news-article-${index+1}">
@@ -280,7 +290,6 @@ function inIndex(){
                 <div>${item.title}</div>
             </div>`;
         })
-
     }
 }
 window.addEventListener('load', inIndex);
