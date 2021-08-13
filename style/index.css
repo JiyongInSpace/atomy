@@ -939,6 +939,7 @@ body::-webkit-scrollbar {
           align-items: center;
   padding: 10px;
   cursor: pointer;
+  font-weight: bold;
 }
 
 .main-article .global-tab-world-back div:first-child {
@@ -961,6 +962,13 @@ body::-webkit-scrollbar {
 
 .main-article .global-tab-world-back div:first-child i {
   font-size: 1.7em;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.main-article .global-tab-world-back:hover i {
+  -webkit-transform: rotate(15deg);
+          transform: rotate(15deg);
 }
 
 .main-article .global-tab-world div:first-child {
@@ -1007,6 +1015,177 @@ body::-webkit-scrollbar {
 @media (max-width: 769px) {
   .main-article .global-tab {
     display: none;
+  }
+}
+
+.main-article .global-info {
+  position: absolute;
+  bottom: 10%;
+  width: 1320px;
+  padding: 40px;
+  display: none;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.main-article .global-info.active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media (max-width: 769px) {
+  .main-article .global-info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+.main-article .global-info-txt {
+  font-size: 20px;
+}
+
+.main-article .global-info-txt span {
+  font-size: 1.5em;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-left: 5px;
+}
+
+.main-article .global-info-txt h2 {
+  font-size: 4.2em;
+  font-weight: bold;
+  line-height: 0.7em;
+}
+
+.main-article .global-info-txt p:nth-child(3) {
+  font-size: 1.5em;
+  line-height: 1.2em;
+  margin: 20px 0;
+  letter-spacing: -0.05em;
+}
+
+.main-article .global-info-txt p:nth-child(4) {
+  font-size: 1.1em;
+}
+
+.main-article .global-info-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.main-article .global-info-btn button {
+  width: 280px;
+  height: 50px;
+  padding: 12px 0;
+  margin-top: 15px;
+  border: none;
+  background-color: white;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.main-article .global-info-btn button:hover {
+  color: white;
+  background-color: #04a6e1;
+}
+
+@media (max-width: 1340px) {
+  .main-article .global-info {
+    width: 100%;
+  }
+}
+
+@media (max-width: 960px) {
+  .main-article .global-info-txt span {
+    font-size: 1.25em;
+  }
+  .main-article .global-info-txt h2 {
+    font-size: 3.5em;
+  }
+  .main-article .global-info-txt p:nth-child(3) {
+    font-size: 1.25em;
+  }
+  .main-article .global-info-txt p:nth-child(4) {
+    font-size: 0.9em;
+  }
+  .main-article .global-info-btn button {
+    width: 200px;
+    height: 40px;
+    padding: 8px 0;
+  }
+}
+
+@media (max-width: 769px) {
+  .main-article .global-info {
+    padding: 20px;
+  }
+  .main-article .global-info-txt span {
+    font-size: 1em;
+  }
+  .main-article .global-info-txt h2 {
+    font-size: 2.5em;
+  }
+  .main-article .global-info-txt p:nth-child(3) {
+    font-size: 1em;
+  }
+  .main-article .global-info-txt p:nth-child(4) {
+    font-size: 0.8em;
+  }
+  .main-article .global-info-btn button {
+    width: 160px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 479px) {
+  .main-article .global-info {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    bottom: 10px;
+  }
+  .main-article .global-info-txt span {
+    font-size: 0.8em;
+  }
+  .main-article .global-info-txt h2 {
+    font-size: 2.5em;
+  }
+  .main-article .global-info-txt p:nth-child(3) {
+    font-size: 0.8em;
+  }
+  .main-article .global-info-txt p:nth-child(4) {
+    font-size: 0.8em;
+  }
+  .main-article .global-info-btn {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    width: 100%;
+  }
+  .main-article .global-info-btn button {
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+  }
+  .main-article .global-info-btn button:first-child {
+    margin-right: 10px;
   }
 }
 
@@ -1138,12 +1317,11 @@ body::-webkit-scrollbar {
 
 .main-article .news-article-1 figure {
   width: 55%;
-  background-image: url("../img/162815259512500.jpg");
+  height: 0;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   padding-bottom: 25%;
-  height: 0;
   cursor: pointer;
 }
 
@@ -1200,7 +1378,6 @@ body::-webkit-scrollbar {
 }
 
 .main-article .news-article-5 figure, .main-article .news-article-2 figure, .main-article .news-article-3 figure, .main-article .news-article-4 figure {
-  background-image: url("../img/161827407554300.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -1257,22 +1434,6 @@ body::-webkit-scrollbar {
   }
 }
 
-.main-article .news-article-2 figure {
-  background-image: url("../img/162604866419800.jpg");
-}
-
-.main-article .news-article-3 figure {
-  background-image: url("../img/162077677327900.jpg");
-}
-
-.main-article .news-article-4 figure {
-  background-image: url("../img/161940080577100.jpg");
-}
-
-.main-article .news-article-5 figure {
-  background-image: url("../img/161827407554300.jpg");
-}
-
 .nav {
   position: fixed;
   right: 0;
@@ -1282,7 +1443,7 @@ body::-webkit-scrollbar {
   transition: 0.5s;
 }
 
-.nav ul {
+.nav-ul {
   position: relative;
   list-style: none;
   color: #555;
@@ -1292,7 +1453,7 @@ body::-webkit-scrollbar {
   font-weight: bold;
 }
 
-.nav ul li {
+.nav-ul li {
   -webkit-transition: 0.5s;
   transition: 0.5s;
   font-size: 1em;
@@ -1300,19 +1461,19 @@ body::-webkit-scrollbar {
   cursor: pointer;
 }
 
-.nav ul li:hover {
+.nav-ul li:hover {
   color: white;
 }
 
-.nav ul li.show {
+.nav-ul li.show {
   color: white;
 }
 
-.nav ul li:nth-child(2).show, .nav ul li:nth-child(3).show, .nav ul li:nth-child(5).show {
+.nav-ul li:nth-child(2).show, .nav-ul li:nth-child(3).show, .nav-ul li:nth-child(5).show {
   color: #04a6e1;
 }
 
-.nav ul div {
+.nav-ul-bar {
   position: absolute;
   top: 13px;
   right: -30px;

@@ -101,7 +101,6 @@ function changePageColor(num){
             break;
     }
 };
-
 window.addEventListener("resize", goToPage);
 window.addEventListener("wheel", scrollPage, {passive : false});
 navs.forEach((nav, index) => {
@@ -256,7 +255,9 @@ aboutSlideBtns.forEach((btn) => {
 });
 addTxtActive(aboutNum);
 
+// about데이터
 const indexUrl = "https://raw.githubusercontent.com/JiyongInSpace/atomy/main/data/data.json";
+const newsArticle = document.querySelector(".news-article");
 function inIndex(){
     fetch(indexUrl)
     .then(res => res.json())
@@ -272,6 +273,14 @@ function inIndex(){
             <p>${data.about[i%6].p2}</p>
             <p>${data.about[i%6].p3}</p>`;
         };
+        data.news.forEach((item, index) => {
+            newsArticle.innerHTML += 
+            `<div class="news-article-${index+1}">
+                <figure style="background-image:url(img/${item.img})"><div>자세히 보기</div></figure>
+                <div>${item.title}</div>
+            </div>`;
+        })
+
     }
 }
 window.addEventListener('load', inIndex);

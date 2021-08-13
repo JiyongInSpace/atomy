@@ -503,7 +503,7 @@ body::-webkit-scrollbar {
                 &-back{
                     @include flex-box();
                     padding: 10px;
-                    cursor: pointer;
+                    cursor: pointer; font-weight: bold;
                     div:first-child{
                         width: 45px; height: 45px;
                         margin-right: 10px;
@@ -511,16 +511,16 @@ body::-webkit-scrollbar {
                         color: white;
                         border-radius: 3em;
                         @include flex-box();
-                        i{font-size: 1.7em;}
+                        i{font-size: 1.7em; transition: 0.3s;}
                     }
+                    &:hover{i{transform: rotate(15deg);}}
                 }
                 div:first-child{
                     flex-shrink: 0;
                 }
                 div:last-child{
                     @include flex-box();
-                    flex-grow: 1;
-                    flex-wrap: wrap;
+                    flex-grow: 1; flex-wrap: wrap;
                     p{margin: 5px 15px; cursor: pointer;
                     &:hover{text-decoration: underline;}}
                 }
@@ -530,15 +530,68 @@ body::-webkit-scrollbar {
                 .global-tab-world{display: flex;}
             }
             @include tablet{display: none;}
-
+        }
+        &-info{
+            &.active{display: flex};
+            position: absolute;
+            bottom: 10%;
+            width: 1320px; padding: 40px;
+            display: none; @include tablet{display: flex;}
+            align-items: flex-end; justify-content: space-between;
+            &-txt{
+                font-size: 20px;
+                span{font-size: 1.5em; text-transform: uppercase;
+                    font-weight: bold; margin-left: 5px;}
+                h2{font-size: 4.2em; font-weight: bold; line-height: 0.7em;}
+                p:nth-child(3){font-size: 1.5em; line-height: 1.2em; margin: 20px 0;
+                                letter-spacing: -0.05em;}
+                p:nth-child(4){font-size: 1.1em;}
+            }
+            &-btn{
+                display: flex; flex-direction: column;
+                button{
+                    width: 280px; height: 50px; padding: 12px 0;
+                    margin-top: 15px; border: none; background-color: white;
+                    @include blue-btn();
+                }
+            }
+            @include global-width{width: 100%;}
+            @include global-width(960px){
+                &-txt{
+                    span{font-size:1.25em;}
+                    h2{font-size:3.5em;}
+                    p:nth-child(3){font-size: 1.25em;}
+                    p:nth-child(4){font-size: 0.9em;}}
+                &-btn{button{width: 200px; height: 40px; padding: 8px 0;}}
+            }
+            @include tablet{
+                padding: 20px;
+                &-txt{
+                    span{font-size:1em;}
+                    h2{font-size:2.5em;}
+                    p:nth-child(3){font-size: 1em;}
+                    p:nth-child(4){font-size: 0.8em;}}
+                &-btn{button{width: 160px; height: 40px;}}
+            }
+            @include mobile{
+                flex-direction: column;
+                align-items: flex-start;
+                bottom: 10px;
+                &-txt{
+                    span{font-size:0.8em;}
+                    h2{font-size:2.5em;}
+                    p:nth-child(3){font-size: 0.8em;}
+                    p:nth-child(4){font-size: 0.8em;}}
+                &-btn{flex-direction: row; width: 100%;
+                    button{flex-grow: 1; &:first-child{margin-right: 10px}}}
+            }
         }
         figure{
             width: 100vw;
             height: 100vh;
             @include flex-box();
             .world-map{
-                height: 80%;
-                margin-top: 100px;
+                height: 80%; margin-top: 100px;
                 @include desktop{height: unset; width: 90%;}
             }
         }
@@ -584,11 +637,9 @@ body::-webkit-scrollbar {
                     font-size: 14px;
                 }
                 figure{
-                    width: 55%;
-                    background-image: url('../img/162815259512500.jpg');
+                    width: 55%; height:0;
                     @include bg-set();
                     padding-bottom: 25%;
-                    height:0;
                     cursor: pointer;
                     @include tablet{
                         display: none;
@@ -619,7 +670,6 @@ body::-webkit-scrollbar {
                 @include tablet{width: 50%;}
                 @include mobile{width: 47vw;}
                 figure{
-                    background-image:url('../img/161827407554300.jpg');
                     @include bg-set();
                     background-size: 100% 100%;
                     padding-bottom: 50%;
@@ -653,19 +703,6 @@ body::-webkit-scrollbar {
                     @include mobile {font-size: 0.85em}
                 }
             }
-            &-2 figure{
-                background-image: url('../img/162604866419800.jpg');;
-            }
-            &-3 figure{
-                background-image: url('../img/162077677327900.jpg');;
-            }
-            &-4 figure{
-                background-image: url('../img/161940080577100.jpg');;
-            }
-            &-5 figure{
-                background-image: url('../img/161827407554300.jpg');;
-            }
-            
         }
     }
 }
@@ -674,7 +711,7 @@ body::-webkit-scrollbar {
     right: 0;
     bottom: 310px;
     z-index: 1;
-    ul{
+    &-ul{
         position: relative;
         list-style: none;
         color: #555;
@@ -693,7 +730,7 @@ body::-webkit-scrollbar {
         li:nth-child(2), li:nth-child(3), li:nth-child(5){
             &.show{color: $main-color;}
         }
-        div{
+        &-bar{
             position: absolute;
             top: 13px;
             right: -30px;

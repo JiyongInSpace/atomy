@@ -130,36 +130,15 @@
                     <div class="global-tab-world-list"></div>
                 </div>
             </div>
+            <div class="global-info"></div>
             <figure>
                 <object class="world-map" data="img/worldwide_map.svg" type="image/svg+xml"></object>
             </figure>
             <select class="global-select"></select>
         </div>
         <div class="news">
-            <article class="news-article">
-                <div class="news-article-1">
-                    <figure></figure>
-                    <div><h2>News Room</h2>애터미 헤모힘, 7년 연속 업계 최고 베스트셀러</div>
-                </div>
-                <div class="news-article-2">
-                    <figure><div>자세히 보기</div></figure>
-                    <div>애터미, 친환경 아이디어 공모전 개최</div>
-                </div>
-                <div class="news-article-3">
-                    <figure><div>자세히 보기</div></figure>
-                    <div>‘애터미 DNA’ 교보문고 경제∙경영분야 1위, 종합 3위 등극!</div>
-                </div>
-                <div class="news-article-4">
-                    <figure><div>자세히 보기</div></figure>
-                    <div>애터미파크 깜짝 방문한 권칠승 중기부 장관</div>
-                </div>
-                <div class="news-article-5">
-                    <figure><div>자세히 보기</div></figure>
-                    <div>애터미, 안과산업 발전 위해 의료 게스트하우스 건립 10억 기부</div>
-                </div>
-            </article>
+            <article class="news-article"></article>
         </div>
-        
     </article>
 
     <nav class="nav">
@@ -181,57 +160,14 @@
             <div><i class="fas fa-sort-up"></i>TOP</div>
             <div><span>ATOMY HUB <i class="fas fa-chevron-down"></i></span></div>
         </div>
-        <div class="aside-hub">
-            <h1 class="aside-hub-title">ATOMY HUB <i class="fas fa-times"></i></h1>
-            <ul class="aside-hub-content">
-                <li class="aside-hub-content-myinfo">
-                    <a href="#"><span><i class="far fa-file-alt"></i>&nbspMy Office</span></a>
-                    <a href="#"><span><i class="far fa-user"></i>&nbspJoin</span></a>
-                </li>
-                <li class="aside-hub-content-item">
-                    <img src="img/atomyHurb_img01.jpg" alt="">
-                    <div>
-                        <h3>Shopping Mall</h3>
-                        <p>애터미 제품을 구매하실 수<br>있습니다.</p>
-                    </div>
-                </li>
-                <li class="aside-hub-content-item">
-                    <img src="img/atomyHurb_img02.jpg" alt="">
-                    <div>
-                        <h3>AZA Mall</h3>
-                        <p>믿을 수 있는 상품을<br>제안하고 판매하는<br>인터넷 종합쇼핑몰입니다.</p>
-                    </div>
-                </li>
-                <li class="aside-hub-content-item">
-                    <img src="img/atomyHurb_img03.jpg" alt="">
-                    <div>
-                        <h3>Ch. Atomy</h3>
-                        <p>각종 영상, 제품, 뉴스 컨텐츠들을<br>제공합니다.</p>
-                    </div>
-                </li>
-                <li class="aside-hub-content-item">
-                    <img src="img/atomyHurb_img04.png" alt="">
-                    <div>
-                        <h3>Atomy Ticket</h3>
-                        <p>애터미의 글로벌 세미나를<br>한눈에 확인하고 알람을
-                            <br>받아보실 수 있습니다.</p>
-                    </div>
-                </li>
-                <ul class="sns">
-                    <li><a href=""></a></li>
-                    <li><a href=""></a></li>
-                    <li><a href=""></a></li>
-                </ul>
-            </ul>
-        </div>
+        <div class="aside-hub" include-html="partial/aside.html"></div>
     </aside>
     <button class="aside-s">
         <i class="fas fa-angle-double-up"></i>
     </button>
     
     <footer class="footer" include-html="partial/footer.html"></footer> 
-    <script>
-        includeHTML();
-    </script>
+
+    <script>includeHTML();</script>
 </body>
 </html>

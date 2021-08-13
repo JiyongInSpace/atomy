@@ -129,70 +129,67 @@
     ],
     "global":[
         {
-            "code": "kor", "class":"hq", "country":"Korea", "adress":"(32543) 2148-21, Baekjemunhwa-ro, Gongju-si, Chungcheongnam-do, Republic of Korea", "number":"TEL +82-1544-8580<br>FAX +82-2-888-4802<br>E-MAIL atomy@atomy.kr<br>www.atomy.kr"
+            "code": "kor", "class":"hq", "country":"Korea", "adress":"(32543) 2148-21, Baekjemunhwa-ro, Gongju-si,<br> Chungcheongnam-do, Republic of Korea", "number":"TEL +82-1544-8580<br>FAX +82-2-888-4802<br>E-MAIL atomy@atomy.kr<br>www.atomy.kr"
         },
         {
             "code": "usa", "class":"na", "country":"USA", "adress":"33801 1st Way South #301 Federal Way, WA 98003 U.S.A", "number":"TEL +1-253-946-2344<br>FAX +1-253-946-2345<br>E-MAIL usa@atomy.kr<br>www.atomy.com/us"
         },
         {
-            "code": "jap", "class":"ap", "country":"Japan", "adress":"Hamacho park side MIN Bldg. 47-3 Nihonbasi Hamacho 2-chome, Chuo-Ku, TOKYO, JAPAN", "number":"TEL +81-3-6806-8640<br>FAX +81-3-6806-8641<br>E-MAIL atomyjp@atomy.kr<br>www.atomy.com/jp"
+            "code": "jap", "class":"ap", "country":"Japan", "adress":"Hamacho park side MIN Bldg.<br>47-3 Nihonbasi Hamacho 2-chome, Chuo-Ku, TOKYO, JAPAN", "number":"TEL +81-3-6806-8640<br>FAX +81-3-6806-8641<br>E-MAIL atomyjp@atomy.kr<br>www.atomy.com/jp"
         },
         {
-            "code": "can", "class":"na", "country":"Canada", "adress":"(32543) 2148-21, Baekjemunhwa-ro, Gongju-si, Chungcheongnam-do, Republic of Korea", "number":"TEL +82-1544-8580<br>FAX +82-2-888-4802<br>E-MAIL atomy@atomy.kr<br>www.atomy.kr"
+            "code": "can", "class":"na", "country":"Canada", "adress":"#600, 4370 Dominion St, Burnaby BC, V5G4L7 CANADA", "number":"E-MAIL atomycanada@atomy.kr<br>www.atomy.com/ca"
         },
         {
-            "code": "tai", "class":"ap", "country":"Taiwan", "adress":"(32543) 2148-21, Baekjemunhwa-ro, Gongju-si, Chungcheongnam-do, Republic of Korea", "number":"TEL +82-1544-8580<br>FAX +82-2-888-4802<br>E-MAIL atomy@atomy.kr<br>www.atomy.kr"
+            "code": "tai", "class":"ap", "country":"Taiwan", "adress":"4F,No. 473, Longde Road, Gushan District, Kaohsiung City, TAIWAN 804", "number":"TEL +886-800-586-685<br>FAX +886-7-586-8582<br>E-MAIL twatomy@twatomy.com.tw<br>www.atomy.com/tw"
         },
         {
-            "code": "sin", "class":"ap", "country":"Singapore", "adress":"(32543) 2148-21, Baekjemunhwa-ro, Gongju-si, Chungcheongnam-do, Republic of Korea", "number":"TEL +82-1544-8580<br>FAX +82-2-888-4802<br>E-MAIL atomy@atomy.kr<br>www.atomy.kr"
+            "code": "sin", "class":"ap", "country":"Singapore", "adress":"1 Commonwealth Lane #07-16 One Commonwealth 149544 SINGAPORE", "number":"TEL +65-6797-9570<br>FAX +65-6659-2998<br>E-MAIL sg.atomy@atomy.com.sg<br>www.atomy.com/sg"
         },
         {
-            "code": "cam", "class":"ap", "country":"Cambodia", "adress":"(32543) 2148-21, Baekjemunhwa-ro, Gongju-si, Chungcheongnam-do, Republic of Korea", "number":"TEL +82-1544-8580<br>FAX +82-2-888-4802<br>E-MAIL atomy@atomy.kr<br>www.atomy.kr"
+            "code": "cam", "class":"ap", "country":"Cambodia", "adress":"3rd Floor, P.G.C.T center, Street 274, Sangkat Tonle Bassac, Khan Cham Karmon, Phnom Penh, CAMBODIA", "number":"TEL +855-23-922-111<br>E-MAIL atomy_kh@atomy.kr<br>www.atomy.com/kh"
         },
         {
-            "code": "phi", "class":"ap", "country":"Philippines", "adress":"(32543) 2148-21, Baekjemunhwa-ro, Gongju-si, Chungcheongnam-do, Republic of Korea", "number":"TEL +82-1544-8580<br>FAX +82-2-888-4802<br>E-MAIL atomy@atomy.kr<br>www.atomy.kr"
+            "code": "phi", "class":"ap", "country":"Philippines", "adress":"Unit 5007, 12th Floor, A Place Building, Coral Way Drive, Mall Of Asia Complex, Central Business Park 1, Island A, Pasay City, 1300 Metro Manila, PHILIPPINES", "number":"TEL +63-2-776-8177<br>FAX +63-2-776-8191<br>E-MAIL atomyph@atomy.kr<br>www.atomy.com/ph"
         },
         {
-            "code": "mal", "class":"ap", "country":"Malaysia", "adress":"(32543) 2148-21, Baekjemunhwa-ro, Gongju-si, Chungcheongnam-do, Republic of Korea", "number":"TEL +82-1544-8580<br>FAX +82-2-888-4802<br>E-MAIL atomy@atomy.kr<br>www.atomy.kr"
+            "code": "mal", "class":"ap", "country":"Malaysia", "adress":"18th Floor, Menara UMW, Jalan Puncak off Jalan P. Ramlee, Kuala Lumpur, 50250 MALAYSIA", "number":"TEL +603-2718-8989 (General)<br>+603-2718-8999 (Customer Service)<br>FAX +603-2718-8988<br>E-MAIL support_my@atomy.kr<br>www.atomy.com/my"
         },
         {
-            "code": "mex", "class":"csa", "country":"Mexico", "adress":"(32543) 2148-21, Baekjemunhwa-ro, Gongju-si, Chungcheongnam-do, Republic of Korea", "number":"TEL +82-1544-8580<br>FAX +82-2-888-4802<br>E-MAIL atomy@atomy.kr<br>www.atomy.kr"
+            "code": "mex", "class":"csa", "country":"Mexico", "adress":"St. Niza 77, 8th Floor, Juarez, Cuauhtemoc, Mexico City, 066000 MEXICO", "number":"TEL +52-55-5086-2855<br>+01-800-777-8580<br>E-MAIL atomymx@atomy.kr<br>www.atomy.com/mx"
         },
         {
-            "code": "tha", "class":"ap", "country":"Thailand", "adress":"(32543) 2148-21, Baekjemunhwa-ro, Gongju-si, Chungcheongnam-do, Republic of Korea", "number":"TEL +82-1544-8580<br>FAX +82-2-888-4802<br>E-MAIL atomy@atomy.kr<br>www.atomy.kr"
+            "code": "tha", "class":"ap", "country":"Thailand", "adress":"175/32-33, Ocean Tower 2 Building, 20th Floor, Soi Sukhumvit 19 (Watthana), Sukhumvit Road, Khwaeng Khlong Toei Nua, Khet Watthana, Bangkok 10110 THAILAND", "number":"TEL +662-024-8924 to 28<br>FAX +662-024-8929<br>EMAIL AtomyTH@atomy.kr<br>www.atomy.com/th"
         },
         {
-            "code": "aus", "class":"ap", "country":"Australia", "adress":"(32543) 2148-21, Baekjemunhwa-ro, Gongju-si, Chungcheongnam-do, Republic of Korea", "number":"TEL +82-1544-8580<br>FAX +82-2-888-4802<br>E-MAIL atomy@atomy.kr<br>www.atomy.kr"
+            "code": "aus", "class":"ap", "country":"Australia", "adress":"Unit 25, 15 Ricketts Road Mount Waverley VIC 3149 Australia", "number":"TEL +61-3-9133-5100<br>FAX +61-3-9133-5199<br>EMAIL Info_au@atomy.com<br>www.atomy.com/au"
         },
         {
-            "code": "ind", "class":"ap", "country":"Indonesia", "adress":"(32543) 2148-21, Baekjemunhwa-ro, Gongju-si, Chungcheongnam-do, Republic of Korea", "number":"TEL +82-1544-8580<br>FAX +82-2-888-4802<br>E-MAIL atomy@atomy.kr<br>www.atomy.kr"
+            "code": "ind", "class":"ap", "country":"Indonesia", "adress":"Gedung 18 Office Park Lt 21 Unit 21F Jl. TB Simatupang No. 18 Kel. Kebagusan, Kec. Pasar Minggu, Kota Jakarta Selatan - Indonesia 12520", "number":"TEL +62-21-2278-0232<br>FAX +62-21-2297-8341<br>E-MAIL atomy_id@atomy.kr<br>www.atomy.com/id"
         },
         {
-            "code": "rus", "class":"eu", "country":"Russia", "adress":"(32543) 2148-21, Baekjemunhwa-ro, Gongju-si, Chungcheongnam-do, Republic of Korea", "number":"TEL +82-1544-8580<br>FAX +82-2-888-4802<br>E-MAIL atomy@atomy.kr<br>www.atomy.kr"
+            "code": "rus", "class":"eu", "country":"Russia", "adress":"7th floor, Gas Field, Ulitsa Obrucheva, 23,к.3, Moskva,117630", "number":"TEL +7-495-189-7494<br>E-MAIL russia@atomy.kr<br>www.atomy.com/ru"
         },
         {
-            "code": "chi", "class":"ap", "country":"China", "adress":"(32543) 2148-21, Baekjemunhwa-ro, Gongju-si, Chungcheongnam-do, Republic of Korea", "number":"TEL +82-1544-8580<br>FAX +82-2-888-4802<br>E-MAIL atomy@atomy.kr<br>www.atomy.kr"
+            "code": "chi", "class":"ap", "country":"China", "adress":"No.16 (3) Hailan Road, High-Tech Development Zone, Yantai, Shandong, China", "number":"TEL  +86-400-0221999 / +86-400-1071999<br>EMAIL chinainfo@vip.163.com<br>www.atomychina.com.cn"
         },
         {
-            "code": "col", "class":"csa", "country":"Colombia", "adress":"(32543) 2148-21, Baekjemunhwa-ro, Gongju-si, Chungcheongnam-do, Republic of Korea", "number":"TEL +82-1544-8580<br>FAX +82-2-888-4802<br>E-MAIL atomy@atomy.kr<br>www.atomy.kr"
+            "code": "col", "class":"csa", "country":"Colombia", "adress":"Carrera 12 #97-32 Piso 6, Edificio Golf 97. Bogotá, Colombia.", "number":"TEL +57 1 9279044<br>E-MAIL colombia@atomy.kr<br>www.atomy.com/co"
         },
         {
-            "code": "hon", "class":"ap", "country":"Hong Kong", "adress":"(32543) 2148-21, Baekjemunhwa-ro, Gongju-si, Chungcheongnam-do, Republic of Korea", "number":"TEL +82-1544-8580<br>FAX +82-2-888-4802<br>E-MAIL atomy@atomy.kr<br>www.atomy.kr"
+            "code": "hon", "class":"ap", "country":"Hong Kong", "adress":"Unit E, 8/F, Billion Plaza II, 10 Cheung Yue Street, Cheung Sha Wan, Kowloon, Hong Kong", "number":"TEL +852 3611 7706<br>E-MAIL atomyhk@atomy.kr<br>www.atomy.com/hk"
         },
         {
-            "code": "indi", "class":"ap", "country":"India", "adress":"(32543) 2148-21, Baekjemunhwa-ro, Gongju-si, Chungcheongnam-do, Republic of Korea", "number":"TEL +82-1544-8580<br>FAX +82-2-888-4802<br>E-MAIL atomy@atomy.kr<br>www.atomy.kr"
+            "code": "indi", "class":"ap", "country":"India", "adress":"801/802, 8th Floor, Magnum Tower 2, Golf Course Extension Road, Sector - 58, Gurugram, Haryana 122011 INDIA", "number":"TEL +91 124-647-2851<br>FAX +91 124-647-2851<br>EMAIL care@atomy.kr<br>www.atomy.com/in"
         },
         {
-            "code": "new", "class":"ap", "country":"New Zealand", "adress":"(32543) 2148-21, Baekjemunhwa-ro, Gongju-si, Chungcheongnam-do, Republic of Korea", "number":"TEL +82-1544-8580<br>FAX +82-2-888-4802<br>E-MAIL atomy@atomy.kr<br>www.atomy.kr"
+            "code": "new", "class":"ap", "country":"New Zealand", "adress":"Unit 5A, 10 Canaveral Drive, Albany, Auckland, New Zealand", "number":"TEL +64 9-869-9988<br>FAX +64 9-869-9989<br>E-MAIL info_nz@atomy.kr<br>www.atomy.com/nz"
         },
         {
-            "code": "tur", "class":"eu", "country":"Turkey", "adress":"(32543) 2148-21, Baekjemunhwa-ro, Gongju-si, Chungcheongnam-do, Republic of Korea", "number":"TEL +82-1544-8580<br>FAX +82-2-888-4802<br>E-MAIL atomy@atomy.kr<br>www.atomy.kr"
+            "code": "tur", "class":"eu", "country":"Turkey", "adress":"Barbaros Mah., Kayacan Sokak No:1, 34746 Ataşehir, Istanbul, TURKEY", "number":"TEL+90-850-290-8060<br>E-MAIL turkey@atomy.kr<br>www.atomy.com/tr"
         },
         {
-            "code": "uni", "class":"eu", "country":"United Kingdom", "adress":"(32543) 2148-21, Baekjemunhwa-ro, Gongju-si, Chungcheongnam-do, Republic of Korea", "number":"TEL +82-1544-8580<br>FAX +82-2-888-4802<br>E-MAIL atomy@atomy.kr<br>www.atomy.kr"
-        },
-        {
-            "code": "vie", "class":"ap", "country":"Vietnam", "adress":"(32543) 2148-21, Baekjemunhwa-ro, Gongju-si, Chungcheongnam-do, Republic of Korea", "number":"TEL +82-1544-8580<br>FAX +82-2-888-4802<br>E-MAIL atomy@atomy.kr<br>www.atomy.kr"
+            "code": "uni", "class":"eu", "country":"United Kingdom", "adress":"Atomy UK, 1 Bell Court, Leapale Lane, Guildford, GU1 4LY, UK", "number":" TEL +44 (0)20 3878 4522<br>E-MAIL uk@atomy.kr<br>www.atomy.uk/uk/Home"
         }
     ], 
     "news":[
@@ -210,7 +207,7 @@
         },
         {
             "title": "애터미파크 깜짝 방문한 권칠승 중기부 장관",
-            "img": "161940080577100.jpg."
+            "img": "161940080577100.jpg"
         },
         {
             "title": "애터미, 안과산업 발전 위해 의료 게스트하우스 건립 10억 기부",
