@@ -1,23 +1,24 @@
 # Atomy
 
-사이트를 클론하며 마크업을 연습합니다. 기능은 바닐라JS만을 사용합니다.
+[기업소개 사이트](https://global.atomy.com/)를 클론하며 마크업을 연습합니다. 기능은 바닐라JS만을 사용합니다.
 
 ## 기능
-<ul>
-  <li>아코디언 메뉴</li>
-  <li>풀페이지 스크롤링, 페이지네이션</li>
-  <li>Scroll To Top</li>
-  <li>외부 SVG파일 핸들링</li>
-  <li>무한루프 슬라이드</li>
-  <li>간단한 Module 만들기(3,4page 탭 레이아웃, background.js)</li>
-  <li>JSON fetch</li>
-  <li>기타</li>
-</ul>
++ 아코디언 메뉴
++ 풀페이지 스크롤링, 페이지네이션
++ Scroll To Top
++ 외부 SVG파일 핸들링
++ 무한루프 슬라이드
++ 간단한 Module 만들기(3,4page 탭 레이아웃, background.js)
++ JSON fetch
++ 기타
 
+## 화면
 ### PC
-<img src="https://user-images.githubusercontent.com/86402261/130949607-531986a1-620d-433b-b136-24de2905f398.gif"><br>
-### Mobile
-<img src="https://user-images.githubusercontent.com/86402261/130949835-6e14b930-d8ca-4c0d-a380-ccbe65298f05.gif" width="200px">
+![pc](https://user-images.githubusercontent.com/86402261/138208671-819f0842-5bfc-40e6-9f49-ab6848a5dfe5.gif)
 
-<br>원사이트 https://global.atomy.com/
-<br>클론 https://jiyonginspace.github.io/atomy/
+### Mobile
+![mobile](https://user-images.githubusercontent.com/86402261/138207932-d693ad62-cb8d-4ba1-8e7c-43c079811143.gif)
+
+
+## 링크
+https://jiyonginspace.github.io/atomy/
